@@ -16,7 +16,7 @@ Eksempelet under viser hvordan man kan angi at leasingobjektet er en Toyota Yari
 [source,xml]
 ----
 <cac:AdditionalDocumentReference>
-<cbc:ID>Toyota Yaris, 1.3 liter/cbc:ID>
+<cbc:ID>Toyota Yaris, 1.3 liter<cbc:ID>
 <cbc:DocumentType>Object</cbc:DocumentType>
 </cac:AdditionalDocumentReference>
 
