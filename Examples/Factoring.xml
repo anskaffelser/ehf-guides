@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Invoice xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2"
+    xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" 
+    xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
+    <cbc:UBLVersionID>2.1</cbc:UBLVersionID>
+    <cbc:CustomizationID>urn:www.cenbii.eu:transaction:biitrns010:ver2.0:extended:urn:www.peppol.eu:bis:peppol5a:ver2.0:extended:urn:www.difi.no:ehf:faktura:ver2.0</cbc:CustomizationID>
+    <cbc:ProfileID>urn:www.cenbii.eu:profile:bii05:ver2.0</cbc:ProfileID>
+    <cbc:ID>123456789</cbc:ID>
+    <cbc:IssueDate>2016-03-01</cbc:IssueDate>
+    <cbc:InvoiceTypeCode listID="UNCL1001">393</cbc:InvoiceTypeCode>
+    <cbc:DocumentCurrencyCode listID="ISO4217">NOK</cbc:DocumentCurrencyCode>
+    <cac:ContractDocumentReference>
+        <cbc:ID>Contract_123</cbc:ID>
+    </cac:ContractDocumentReference>
+    <cac:AccountingSupplierParty>
+        <cac:Party>
+            <cbc:EndpointID schemeID="NO:ORGNR">999888777</cbc:EndpointID>
+            <cac:PartyIdentification>
+                <cbc:ID schemeID="NO:ORGNR">999888777</cbc:ID>
+            </cac:PartyIdentification>
+            <cac:PartyName>
+                <cbc:Name>Selgers AS</cbc:Name>
+            </cac:PartyName>
+            <cac:PostalAddress>
+                <cbc:StreetName>Gatenavn 123</cbc:StreetName>
+                <cbc:CityName>OSLO</cbc:CityName>
+                <cbc:PostalZone>0101</cbc:PostalZone>
+                <cac:Country>
+                    <cbc:IdentificationCode listID="ISO3166-1:Alpha2">NO</cbc:IdentificationCode>
+                </cac:Country>
+            </cac:PostalAddress>
+            <cac:PartyTaxScheme>
+                <cbc:CompanyID schemeID="NO:VAT">993417262MVA</cbc:CompanyID>
+                <cac:TaxScheme>
+                    <cbc:ID>VAT</cbc:ID>
+                </cac:TaxScheme>
+            </cac:PartyTaxScheme>
+            <cac:PartyLegalEntity>
+                <cbc:RegistrationName>Selger AS</cbc:RegistrationName>
+                <cbc:CompanyID schemeID="NO:ORGNR" schemeName="Foretaksregisteret">999888777</cbc:CompanyID>
+            </cac:PartyLegalEntity>
+            <cac:Contact>
+                <cbc:ID>abc123</cbc:ID>
+            </cac:Contact>
+        </cac:Party>
+    </cac:AccountingSupplierParty>
+    <cac:AccountingCustomerParty>
+        <cac:Party>
+            <cbc:EndpointID schemeID="NO:ORGNR">987987987</cbc:EndpointID>
+            <cac:PartyIdentification>
+                <cbc:ID schemeID="ZZZ">34567</cbc:ID>
+            </cac:PartyIdentification>
+            <cac:PartyName>
+                <cbc:Name>Kjøper AS</cbc:Name>
+            </cac:PartyName>
+            <cac:PostalAddress>
+                <cbc:StreetName>Adresse 1</cbc:StreetName>
+                <cbc:CityName>BERGEN</cbc:CityName>
+                <cbc:PostalZone>5020</cbc:PostalZone>
+                <cac:Country>
+                    <cbc:IdentificationCode listID="ISO3166-1:Alpha2">NO</cbc:IdentificationCode>
+                </cac:Country>
+            </cac:PostalAddress>
+            <cac:PartyLegalEntity>
+                <cbc:RegistrationName>Kjøper AS</cbc:RegistrationName>
+                <cbc:CompanyID schemeID="NO:ORGNR">987987987</cbc:CompanyID>
+            </cac:PartyLegalEntity>
+            <cac:Contact>
+                <cbc:ID>abc123</cbc:ID>
+            </cac:Contact>
+        </cac:Party>
+    </cac:AccountingCustomerParty>
+    <cac:PayeeParty>
+        <cac:PartyIdentification>
+            <cbc:ID schemeID="GLN">2298740918237</cbc:ID>
+        </cac:PartyIdentification>
+        <cac:PartyName>
+            <cbc:Name>Ebeneser Scrooge AS</cbc:Name>
+        </cac:PartyName>
+        <cac:PartyLegalEntity>
+            <cbc:CompanyID schemeID="NO:ORGNR">989823401</cbc:CompanyID>
+        </cac:PartyLegalEntity>
+    </cac:PayeeParty>
+    <cac:Delivery>
+        <cbc:ActualDeliveryDate>2016-02-12</cbc:ActualDeliveryDate>
+        <cac:DeliveryLocation>
+            <cac:Address>
+                <cbc:StreetName>Leveringsadresse 2</cbc:StreetName>
+                <cbc:CityName>BERGEN</cbc:CityName>
+                <cbc:PostalZone>5020</cbc:PostalZone>
+                <cac:Country>
+                    <cbc:IdentificationCode listID="ISO3166-1:Alpha2">NO</cbc:IdentificationCode>
+                </cac:Country>
+            </cac:Address>
+        </cac:DeliveryLocation>
+    </cac:Delivery>
+    <cac:PaymentMeans>
+        <cbc:PaymentMeansCode listID="UNCL4461">31</cbc:PaymentMeansCode>
+        <cbc:PaymentDueDate>2016-03-25</cbc:PaymentDueDate>
+        <cbc:PaymentID>KID_12344</cbc:PaymentID>
+        <cac:PayeeFinancialAccount>
+            <cbc:ID schemeID="BBAN">12345678909</cbc:ID>
+        </cac:PayeeFinancialAccount>
+    </cac:PaymentMeans>
+    <cac:PaymentTerms>
+        <cbc:Note>10 dager netto</cbc:Note>
+    </cac:PaymentTerms>
+    <cac:AllowanceCharge>
+        <cbc:ChargeIndicator>true</cbc:ChargeIndicator>
+        <cbc:AllowanceChargeReason>Faktureringsgebyr</cbc:AllowanceChargeReason>
+        <cbc:Amount currencyID="NOK">50</cbc:Amount>
+        <cac:TaxCategory>
+            <cbc:ID schemeID="UNCL5305">Z</cbc:ID>
+            <cbc:Percent>25</cbc:Percent>
+            <cac:TaxScheme>
+                <cbc:ID>VAT</cbc:ID>
+            </cac:TaxScheme>
+        </cac:TaxCategory>
+    </cac:AllowanceCharge>
+    <cac:TaxTotal>
+        <cbc:TaxAmount currencyID="NOK">255.7</cbc:TaxAmount>
+        <cac:TaxSubtotal>
+            <cbc:TaxableAmount currencyID="NOK">1022.8</cbc:TaxableAmount>
+            <cbc:TaxAmount currencyID="NOK">255.7</cbc:TaxAmount>
+            <cac:TaxCategory>
+                <cbc:ID schemeID="UNCL5305">S</cbc:ID>
+                <cbc:Percent>25</cbc:Percent>
+                <cac:TaxScheme>
+                    <cbc:ID>VAT</cbc:ID>
+                </cac:TaxScheme>
+            </cac:TaxCategory>
+        </cac:TaxSubtotal>
+    </cac:TaxTotal>
+    <cac:LegalMonetaryTotal>
+        <cbc:LineExtensionAmount currencyID="NOK">972.8</cbc:LineExtensionAmount>
+        <cbc:TaxExclusiveAmount currencyID="NOK">1022.8</cbc:TaxExclusiveAmount>
+        <cbc:TaxInclusiveAmount currencyID="NOK">1278.5</cbc:TaxInclusiveAmount>
+        <cbc:ChargeTotalAmount currencyID="NOK">50</cbc:ChargeTotalAmount>
+        <cbc:PayableAmount currencyID="NOK">1278.5</cbc:PayableAmount>
+    </cac:LegalMonetaryTotal>
+    <cac:InvoiceLine>
+        <cbc:ID>1</cbc:ID>
+        <cbc:InvoicedQuantity unitCode="EA" unitCodeListID="UNECERec20">1</cbc:InvoicedQuantity>
+        <cbc:LineExtensionAmount currencyID="NOK">972.8</cbc:LineExtensionAmount>
+        <cbc:AccountingCost>NS4102;Konto=4010;Avd=23;Prod=3453;Prosj=4098;MVAkode=1</cbc:AccountingCost>
+        <cac:OrderLineReference>
+            <cbc:LineID>1</cbc:LineID>
+        </cac:OrderLineReference>
+        <cac:Item>
+            <cbc:Description>Bluetooth høyttaler</cbc:Description>
+            <cbc:Name>BT Speaker 13.2</cbc:Name>
+            <cac:SellersItemIdentification>
+                <cbc:ID>342312</cbc:ID>
+            </cac:SellersItemIdentification>
+            <cac:ClassifiedTaxCategory>
+                <cbc:ID schemeID="UNCL5305">S</cbc:ID>
+                <cbc:Percent>25</cbc:Percent>
+                <cac:TaxScheme>
+                    <cbc:ID>VAT</cbc:ID>
+                </cac:TaxScheme>
+            </cac:ClassifiedTaxCategory>
+        </cac:Item>
+        <cac:Price>
+            <cbc:PriceAmount currencyID="NOK">972.8</cbc:PriceAmount>
+        </cac:Price>
+    </cac:InvoiceLine>
+</Invoice>

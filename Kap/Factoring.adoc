@@ -6,7 +6,9 @@ For en factoringfaktura skal `<cbc:InvoiceTypeCode>` settes til verdien "393" fo
 
 Når fakturatype = "393" så må  `<cac:PayeeParty>` fylles ut:
 
+
 [source,xml]
+----
 <cac:PayeeParty>
 	<cac:PartyIdentification>
 		<cbc:ID schemeID="GLN">2298740918237</cbc:ID>
@@ -20,3 +22,6 @@ Når fakturatype = "393" så må  `<cac:PayeeParty>` fylles ut:
 </cac:PayeeParty>
 
 ----
+
+Eksempelfil:
+link:Examples/Factoring.xml[Factoring.xml]
