@@ -1,0 +1,9 @@
+= Summary
+
+. link:chapter-1/Introduction.adoc[Forord]
+. link:chapter-2/Leasing.adoc[Leasing-fakturaer]
+. link:chapter-3/Loans.adoc[Lånefakturaer]
+. link:chapter-4/Factoring.adoc[Factoring]
+. link:chapter-5/Sales.adoc[Salgsfaktura]
+. link:chapter-6/Creditnote.adoc[Kreditnota]
+. link:chapter-7/Annex.adoc[Vedlegg]

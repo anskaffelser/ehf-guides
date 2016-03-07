@@ -1,0 +1,6 @@
+== Kreditnota
+
+Kreditnotaer utfylles på samme måte som en faktura.
+Anbefalingene gitt i denne veiledningen er også gyldig for kreditnotaer.
+Slik at kreditering av en lånefaktura vil inneholde de samme elementene
+som angitt for en lånefakturaen.

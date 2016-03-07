@@ -1,0 +1,12 @@
+== Salgsfaktura
+
+Vanlige salgsfakturaer har ingen spesifikke informasjonskrav utover det som er angitt i vanlig EHF veileder.
+
+Følgende varianter håndteres på samme måte som salgsfaktura, og finnes som eksempelfiler:
+
+* Netting-faktura
+* Rentefaktura / forsinkelsesrente
+* Lagerfinansiering
+* Ad-hoc faktura
+** Avgiftsfaktura
+** Ekstraordinære innbetalinger

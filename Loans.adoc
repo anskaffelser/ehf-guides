@@ -1,0 +1,59 @@
+== Låne fakturaer
+
+
+Med lånefakturaer menes fakturaer for innkreving av forfalt terminbeløp (renter og/eller avdrag). En undertype vil her være **Næringslån med pant i fast eiendom**, men prosjektgruppen har ikke funnet at denne undertypen har informasjonsbehov utover det som skisseres for generelle lånefakturaer.
+
+I en lånefaktura må det oppgis informasjon om det objektet lånet er tatt opp på og låne-nummer. Typisk vil en lånefaktura bestå av fakturalinjer for renter og avdrag. Og i tillegg påløper det også ofte ett gebyr eller to.
+
+Objektet angis (på samme måte som for leasingfaktura) i `cac:AdditionalDocumentReference`
+
+[source,xml]
+----
+<cac:AdditionalDocumentReference>
+<cbc:ID>245<cbc:ID>
+<cbc:DocumentType>Gnr.</cbc:DocumentType>
+</cac:AdditionalDocumentReference>
+
+<cac:AdditionalDocumentReference>
+<cbc:ID>17</cbc:ID>
+<cbc:DocumentType>Bnr.</cbc:DocumentType>
+</cac:AdditionalDocumentReference>
+
+----
+
+Lånenummer angis i en EHF faktura i elementet `cac:ContractDocumentReference/cbc:ID`:
+
+[source,xml]
+----
+<cac:ContractDocumentReference>
+	<cbc:ID>12345-455</cbc:ID>
+</cac:ContractDocumentReference
+
+----
+
+Rabatter og gebyrer har egne elementer i en EHF faktura,
+og kan angis på 3 nivåer:
+
+. Dokumentnivå
+. Linjenivå
+. Prisnivå
+
+Videre detaljer om beregninger og merverdiavgift for rabatter på de ulike nivåer, finnes i EHF Implementasjonsguide kapittel 6.2. Se også eksempel:
+
+[source,xml]
+<cac:AllowanceCharge>
+	<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
+	<cbc:AllowanceChargeReasonCode listID="UNCL4465">94
+	</cbc:AllowanceChargeReasonCode>
+	<cbc:AllowanceChargeReason>Termingebyr</cbc:AllowanceChargeReason>
+	<cbc:Amount currencyID="NOK">100</cbc:Amount>
+	<cac:TaxCategory>
+		<cbc:ID schemeID="UNCL5305">S</cbc:ID>
+		<cbc:Percent>25</cbc:Percent>
+		<cac:TaxScheme>
+			<cbc:ID>VAT</cbc:ID>
+		</cac:TaxScheme>
+	</cac:TaxCategory>
+</cac:AllowanceCharge>
+
+----
