@@ -1,3 +1,36 @@
-= Readme file
+== Forord
 
-This is an introductory note
+
+Denne veiledning er en av mange veiledere som beskriver hvordan EHF faktura og kreditnota skal benyttes i ulike bransjer i det norske markedet.
+
+=== Formål
+Formålet med dette dokumentet er å beskrive og presisere bruk av EHF faktura og kreditnota for finansnæringen i Norge.
+
+Med finansnæringen mener vi....
+
+=== Referanser
+
+=== Begrepsdefinisjoner
+
+Dokumentnivå::
+_Felles informasjon som gjelder hele fakturaen eller kreditnotaen._
+
+Linjenivå::
+_Informasjon som gjelder en enkelt linje som inngår i en faktura eller kreditnota. Ofte benyttes også uttrykket fakturalinje eller varelinje._
+
+=== Fakturatyper
+Følgende typer av fakturaer har prosjektet funnet i bruk i finansnæringen, og disse er analysert videre for å spesifisere informasjonsbehov og hvordan dette informasjonsbehovet kan dekkes i en EHF faktura eller kreditnota.
+
+De ulike fakturatypene gjennomgås i egne kapitler, med beskrivelser og eksempler på utfylling i EHF.
+
+. Leasing-fakturaer
+* Vanlig leasing
+* Avslutningsfaktura
+* Lease build-up
+. Låne-fakturaer
+* Næringslån med pant i eiendom
+. Factoring
+. Salgsfaktura
+* Netting-faktura
+* Lagerfinansiering
+* Ad-hoc faktura
