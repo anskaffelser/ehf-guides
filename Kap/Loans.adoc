@@ -1,4 +1,4 @@
-== Låne fakturaer
+== Lånefakturaer
 
 
 Med lånefakturaer menes fakturaer for innkreving av forfalt terminbeløp (renter og/eller avdrag). En undertype vil her være **Næringslån med pant i fast eiendom**, men prosjektgruppen har ikke funnet at denne undertypen har informasjonsbehov utover det som skisseres for generelle lånefakturaer.
@@ -41,6 +41,7 @@ og kan angis på 3 nivåer:
 Videre detaljer om beregninger og merverdiavgift for rabatter på de ulike nivåer, finnes i EHF Implementasjonsguide kapittel 6.2. Se også eksempel:
 
 [source,xml]
+----
 <cac:AllowanceCharge>
 	<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
 	<cbc:AllowanceChargeReasonCode listID="UNCL4465">94
