@@ -24,4 +24,4 @@ Når fakturatype = "393" så må  `<cac:PayeeParty>` fylles ut:
 ----
 
 Eksempelfil:
-link:Examples/Factoring.xml[Factoring.xml]
+https://github.com/OpenPEPPOL/finansveileder/blob/master/Examples/Factoring.xml[Factoring.xml]
