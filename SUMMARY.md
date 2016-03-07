@@ -1,6 +1,6 @@
 # Summary
 
-* [Forord](Readme.adoc)
+
 * [Leasingfakturaer](Kap/Leasing.adoc)
 * [Lånefakturaer](Kap/Loans.adoc)
 * [Factoring](Kap/Factoring.adoc)
