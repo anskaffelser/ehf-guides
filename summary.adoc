@@ -1,9 +1,0 @@
-= Summary
-
-. link:Kap/Introduction.adoc[Forord]
-. link:Kap/Leasing.adoc[Leasingfakturaer]
-. link:Kap/Loans.adoc[Lånefakturaer]
-. link:Kap/Factoring.adoc[Factoring]
-. link:Kap/Sales.adoc[Salgsfaktura]
-. link:Kap/Creditnote.adoc[Kreditnota]
-. link:Kap/Annex.adoc[Vedlegg]
