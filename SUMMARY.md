@@ -7,4 +7,4 @@
 * [Salgsfaktura](Kap/Sales.adoc)
 * [Kreditnota](Kap/Creditnote.adoc)
 * [Vedlegg](Kap/Annex.adoc)
-* [Ordliste](Kap/Glossary.md)
+* [Ordliste](GLOSSARY.md)
