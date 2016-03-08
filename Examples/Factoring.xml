@@ -31,7 +31,7 @@
                 </cac:Country>
             </cac:PostalAddress>
             <cac:PartyTaxScheme>
-                <cbc:CompanyID schemeID="NO:VAT">993417262MVA</cbc:CompanyID>
+                <cbc:CompanyID schemeID="NO:VAT">999888777MVA</cbc:CompanyID>
                 <cac:TaxScheme>
                     <cbc:ID>VAT</cbc:ID>
                 </cac:TaxScheme>
@@ -76,10 +76,10 @@
             <cbc:ID schemeID="GLN">2298740918237</cbc:ID>
         </cac:PartyIdentification>
         <cac:PartyName>
-            <cbc:Name>Ebeneser Scrooge AS</cbc:Name>
+            <cbc:Name>Faktoringselskap</cbc:Name>
         </cac:PartyName>
         <cac:PartyLegalEntity>
-            <cbc:CompanyID schemeID="NO:ORGNR">989823401</cbc:CompanyID>
+            <cbc:CompanyID schemeID="NO:ORGNR">975864753</cbc:CompanyID>
         </cac:PartyLegalEntity>
     </cac:PayeeParty>
     <cac:Delivery>
