@@ -5,7 +5,7 @@ Med lånefakturaer menes fakturaer for innkreving av forfalt terminbeløp (rente
 
 I en lånefaktura må det oppgis informasjon om det objektet lånet er tatt opp på og låne-nummer. Typisk vil en lånefaktura bestå av fakturalinjer for renter og avdrag. Og i tillegg påløper det også ofte ett gebyr eller to.
 
-Objektet angis (på samme måte som for leasingfaktura) i `cac:AdditionalDocumentReference`
+Objektet angis (på samme måte som for leasingfaktura) i `cac:AdditionalDocumentReference`, og i eksempelet under her angis gårds- og bruksnummer for låneobjektet.
 
 [source,xml]
 ----
@@ -21,7 +21,7 @@ Objektet angis (på samme måte som for leasingfaktura) i `cac:AdditionalDocumen
 
 ----
 
-Lånenummer angis i en EHF faktura i elementet `cac:ContractDocumentReference/cbc:ID`:
+Lånenummer skal angis i en EHF faktura i elementet `cac:ContractDocumentReference/cbc:ID`:
 
 [source,xml]
 ----
@@ -38,7 +38,10 @@ og kan angis på 3 nivåer:
 . Linjenivå
 . Prisnivå
 
-Videre detaljer om beregninger og merverdiavgift for rabatter på de ulike nivåer, finnes i EHF Implementasjonsguide kapittel 6.2. Se også eksempel:
+Videre detaljer om beregninger og merverdiavgift for rabatter, finnes i
+https://test-vefa.difi.no/ehf/guide/invoice-and-creditnote/2.0/no/beskrivelse/rabatter-og-gebyrer.html[EHF veiledningen kap.6.2]
+  
+Eksempelet under viser også angivelsen av et termingebyr på kr. 100,-
 
 [source,xml]
 ----
