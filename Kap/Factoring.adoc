@@ -1,10 +1,28 @@
-== Factoring
+= Factoring
 
-Med factoringfaktura menes at tredjepart (faktor) har overtatt kundefordringene, og denne utsteder fakturaen og angis som betalingsmottaker på fakturaen (PayeeParty)
+NOTE: Med factoringfaktura menes at tredjepart (faktor) har overtatt kundefordringene, og denne utsteder fakturaen og angis som betalingsmottaker på fakturaen (PayeeParty)
 
-For en factoringfaktura skal `<cbc:InvoiceTypeCode>` settes til verdien "393" for factoring. På denne måten kan mottaker automatisere prosesser basert på fakturatypen.
 
-Når fakturatype = "393" så må  `<cac:PayeeParty>` fylles ut:
+Det er også viktig å merke seg at det kan forekomme factoring både for leasing, lån og vanlige salgsfakturaer.
+
+
+== Informasjonsbehov
+
+=== Fakturatype
+
+For at mottaker skal kunne legge tilrette for automatiserte prosesser, anbefaler vi at fakturatype settes til verdien "393" som står for "factored  invoice".footnoteref:[fakturatype, I henhold til kodeliste UNCL 1001]
+
+Fakturatype angis i elementet
+https://vefa.difi.no/ehf/gefeg/invoice/2.0/gu1.htm?https://vefa.difi.no/ehf/gefeg/invoice/2.0/gu11.htm[`InvoiceTypeCode`] slik:
+
+[source,xml]
+----
+<cbc:InvoiceTypeCode>393<cbc:InvoiceTypeCode>
+----
+
+=== Betalingsmottaker
+
+En factoringfaktura er som spesifisert over her en faktura der betalingsmottaker er en annen part enn selger/leverandør. I en slik faktura, angis selger som vanlig i `AccountingSupplierParty`, mens betalingsmottaker (faktor) angis i elementet `PayeeParty`:
 
 
 [source,xml]
@@ -14,7 +32,7 @@ Når fakturatype = "393" så må  `<cac:PayeeParty>` fylles ut:
 		<cbc:ID schemeID="GLN">2298740918237</cbc:ID>
 	</cac:PartyIdentification>
 	<cac:PartyName>
-		<cbc:Name>Ebeneser Scrooge AS</cbc:Name>
+		<cbc:Name>Faktoringselskap AS</cbc:Name>
 	</cac:PartyName>
 	<cac:PartyLegalEntity>
 		<cbc:CompanyID schemeID="NO:ORGNR">989823401</cbc:CompanyID>

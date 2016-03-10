@@ -1,15 +1,42 @@
-== Leasing-fakturaer
+= Leasing - faktura for terminleie
 
 
-Med leasingfaktura menes fakturaer for innkreving av avtalt leasingbeløp for en gitt periode, her dekkes også leasingfakturaer som er delvis betalt samt leasing med startleie.
+NOTE: Med leasingfaktura menes fakturaer for innkreving av terminleie for avtalt leieperiode. Her dekkes også leasingfakturaer som er delvis betalt samt leasing med startleie.
 
-Prosjektgruppen har også sett på **lease build-up** og på **Avslutningsfaktura**. Disse to typene av fakturaer anses å være undertyper av generelle leasingfakturaer, og gruppen har ikke funnet at disse har ytterligere informasjonsbehov annet enn det som er skissert under. En **proforma avslutningsfaktura** anses å være en type tilbud uten fakturanummer, og faller dermed utenfor EHF.
+Prosjektgruppen har også sett på **lease build-up** og på **Avslutningsfaktura / utkjøpsfaktura**. Disse to typene av fakturaer anses å være undertyper av generelle leasingfakturaer, og gruppen har ikke funnet at disse har ytterligere informasjonsbehov annet enn det som er skissert under.
 
-I en leasingfaktura er det ønskelig/nødvendig å kunne angi informasjon om leie-objektet og det er viktig med informasjon om perioden/terminen fakuraen gjelder for.
+En **proforma avslutningsfaktura / utkjøpsanmodning** anses å være en type tilbud uten fakturanummer, og faller dermed utenfor EHF.
 
-For en leasingfaktura anbefaler vi at `<cbc:InvoiceTypeCode>` settes til verdien "394" for Lease-faktura. På denne måten kan mottaker automatisere prosesser basert på fakturatypen.
 
-Informasjon om leie-objektet bør angis i elementet `cac:AdditionalDocumentReference`.
+== Informasjonsbehov
+
+=== Fakturatype
+
+For at mottaker skal kunne legge tilrette for automatiserte prosesser, anbefaler vi at fakturatype i en leasingfaktura settes til verdien "394" som står for "Lease invoice".
+
+Fakturatype angis i elementet https://vefa.difi.no/ehf/gefeg/invoice/2.0/gu1.htm?https://vefa.difi.no/ehf/gefeg/invoice/2.0/gu11.htm[`InvoiceTypeCode`] slik:
+
+[source,xml]
+----
+<cbc:InvoiceTypeCode>394<cbc:InvoiceTypeCode>
+----
+
+=== Leasingobjektet
+
+Det er et behov og ønske om å angi informasjon om leasingobjektet på en strukturert måte i EHF, og følgende er prosjektgruppens anbefaling.
+
+Informasjon om leasing-objektet bør ikke legges i fritekst-felter, men heller angis som tilleggsdokumentasjon, og dette gjøres i elementet
+https://vefa.difi.no/ehf/gefeg/invoice/2.0/gu1.htm?https://vefa.difi.no/ehf/gefeg/invoice/2.0/gu30.htm[`AdditionalDocumentReference`], med `DocumentType` = _Object_
+
+
+
+==== Biler/kjøretøy med registreringsnummer
+
+For leasing av biler eller andre kjøretøy med registreringsnummer, anbefaler vi å oppgi både typen kjøretøy, samt registreringsnummeret.
+
+Typen kjøretøy angis i ved å sette elementet `DocumentType` til _Object_
+
+Registreringsnummer angis ved at elementet `DocumentType` får verdien _License_, og selve registreringsnummeret oppgis i `ID`.
 
 Eksempelet under viser hvordan man kan angi at leasingobjektet er en Toyota Yaris, med registreringsnummer AB12345:
 
@@ -27,10 +54,85 @@ Eksempelet under viser hvordan man kan angi at leasingobjektet er en Toyota Yari
 
 ----
 
+==== Anleggsmaskiner uten registreringsnummer
+
+Ved leasing av anleggsmaskiner som ikke har registreringsnummer eller serienummer, angis kun en instans av `AdditionalDocumentReference`, med `DocumentType` satt til _Object_, slik:
+
+[source,xml]
+----
+<cac:AdditionalDocumentReference>
+<cbc:ID>Caterpiller D6R LGP Dozer<cbc:ID>
+<cbc:DocumentType>Object</cbc:DocumentType>
+</cac:AdditionalDocumentReference>
+
+----
 
 
-Fakturaperiode kan i EHF oppgis både på dokumentnivå og på linjenivå, slik at man for de ulike fakturalinjene, kan angi spesifikke perioder/terminer. Periodene som angis på linjenivå bør ikke gå ut over den perioden som evt er angitt på dokumentnivå.
+==== Anleggsmaskiner med serienummer
 
+For anleggsmaskiner med serienummer angis selve objektet som  i eksempelet over, mens serienummer angis med `DocumentType`
+satt til _Serialnumber_. Se eksempel:
+
+[source,xml]
+----
+<cac:AdditionalDocumentReference>
+<cbc:ID>Volvo EC460 BLC<cbc:ID>
+<cbc:DocumentType>Object</cbc:DocumentType>
+</cac:AdditionalDocumentReference>
+
+<cac:AdditionalDocumentReference>
+<cbc:ID>80398</cbc:ID>
+<cbc:DocumentType>Serialnumber</cbc:DocumentType>
+</cac:AdditionalDocumentReference>
+
+----
+
+==== Skip med registreringsnummer
+
+Ved leasing av skip med registreringsnummer, benyttes samme tekst i `DocumentType` som ved leasing av bil/kjøretøy med registreringsnummer.
+
+Eksempel:
+[source,xml]
+----
+<cac:AdditionalDocumentReference>
+<cbc:ID>Stinger 1100Z-DPH Lasteskip<cbc:ID>
+<cbc:DocumentType>Object</cbc:DocumentType>
+</cac:AdditionalDocumentReference>
+
+<cac:AdditionalDocumentReference>
+<cbc:ID>LK1234</cbc:ID>
+<cbc:DocumentType>License</cbc:DocumentType>
+</cac:AdditionalDocumentReference>
+
+----
+
+==== Software og Server løsninger
+
+I tilfeller med leasing av software, servere eller annet IT-utstyr, henvises det oftest til ordrenummer/PO nummer, og ikke til et konkret leasingobjekt. I `AdditionalDocumentReference` henvises det derfor kun til ordrenummeret, og dette angis i `OrderReference`
+
+Eksempel:
+[source,xml]
+----
+<cac:AdditionalDocumentReference>
+<cbc:ID>Se ordrenummer<cbc:ID>
+<cbc:DocumentType>Object</cbc:DocumentType>
+</cac:AdditionalDocumentReference>
+
+----
+
+[source,xml]
+----
+<cac:OrderReference>
+	<cbc:ID>PO_12345</cbc:ID>
+</cac:OrderReference>
+
+----
+
+=== Fakturaperiode
+
+I en leasingfaktura er det ofte behov for å angi ulike fakturaperioder på ulike fakturalinjer. Derfor angis oftest fakturaperioden på linjenivå, ikke på dokumentnivå.
+
+Fakturaperioden angis i elementet `InvoicePeriod` slik:
 
 [source,xml]
 ----
@@ -40,5 +142,50 @@ Fakturaperiode kan i EHF oppgis både på dokumentnivå og på linjenivå, slik 
 </cac:InvoicePeriod>
 
 ----
+
+=== Ordrenummer
+
+Ordrenummer angis i elementet `OrderReference`.
+
+
+[source,xml]
+----
+<cac:OrderReference>
+	<cbc:ID>PO_123456</cbc:ID>
+</cac:OrderReference>
+
+----
+
+=== Gebyr
+
+En leasingavtale innebærer også ofte at det skal betales en del gebyrer, bl.a termingebyr.
+
+EHF har egne elementer for å angi gebyrer, og disse skal også benyttes for å angi gebyrer knyttet til en leasingfaktura.
+
+Videre detaljer om gebyr (og rabatter), finnes i
+https://test-vefa.difi.no/ehf/guide/invoice-and-creditnote/2.0/no/beskrivelse/rabatter-og-gebyrer.html[EHF veiledningen kap.6.2]
+
+Eksempelet under viser angivelsen av et termingebyr på kr. 100,-
+
+[source,xml]
+----
+<cac:AllowanceCharge>
+	<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
+	<cbc:AllowanceChargeReasonCode listID="UNCL4465">11
+	</cbc:AllowanceChargeReasonCode>  <1>
+	<cbc:AllowanceChargeReason>Termingebyr</cbc:AllowanceChargeReason>
+	<cbc:Amount currencyID="NOK">100</cbc:Amount>
+	<cac:TaxCategory>
+		<cbc:ID schemeID="UNCL5305">E</cbc:ID>
+		<cbc:Percent>0</cbc:Percent>
+		<cac:TaxScheme>
+			<cbc:ID>VAT</cbc:ID>
+		</cac:TaxScheme>
+	</cac:TaxCategory>
+</cac:AllowanceCharge>
+
+----
+<1> Se kodeliste http://www.unece.org/fileadmin/DAM/trade/untdid/d15b/tred/tred4465.htm[UNCL4465] for gyldige koder.
+
 
 Fullstendig EHF eksempelfil finnes vedlagt som *UC_finans_1.xml*

@@ -1,5 +1,12 @@
-== Vedlegg
 
-Fullverdige testfiler for de ulike fakturatypene finnes her (sett inn lenke)
+=== Referanser og vedlegg
 
-EHF Veiledere finner dere her (sett inn lenke)
+EHF Implementasjonsguide:: https://test-vefa.difi.no/ehf/guide/invoice-and-creditnote/2.0/no/[https://test-vefa.difi.no/ehf/guide/invoice-and-creditnote/2.0/no/]
+
+Eksempelfiler::
+https://github.com/OpenPEPPOL/finansveileder/tree/master/Examples[https://github.com/OpenPEPPOL/finansveileder/tree/master/Examples]
+
+Vefa::
+https://vefa.difi.no/[https://vefa.difi.no/]
+
+Transport-infrastruktur

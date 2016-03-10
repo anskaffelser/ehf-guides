@@ -1,6 +1,4 @@
-== Begrepsdefinisjoner
 
-Flyttes helt sist i dokumentet, ta inn ulike faktura-typer.
 
 # Dokumentnivå
 Felles informasjon som gjelder hele fakturaen eller kreditnotaen.
@@ -9,15 +7,22 @@ Felles informasjon som gjelder hele fakturaen eller kreditnotaen.
 Informasjon som gjelder en enkelt linje som inngår i en faktura eller kreditnota. Ofte benyttes også uttrykket fakturalinje eller varelinje.
 
 # Leasing-fakturaer
-Leasing faktura er....
+Fakturaer for innkreving av leasingbeløp for avtalt leieperiode.
 
-# Vanlig leasing
+# Leasing
+Finansieringsform som er en mellomting mellom leie og lånefinansiering. https://no.wikipedia.org/wiki/Leasing
 
 # Avslutningsfaktura
-Samme som en faktura for utkjøp
+Se Utkjøpsfaktura
+
+# Utkjøpsfaktura
+Faktura som utstedes når kunden har anmodet utkjøp for å overta eiendomsretten til leasingobjektet etter avtalens utløp.
+
+# Utkjøpsanmodning
+Tilbud til kunde om utkjøp av leasingobjektet etter leasingavtalens utløp.
 
 # Lease build-up
 Rentefaktura før start av avtaleperiode
 
-# Låne-fakturaer
-Eksempel Næringslån med pant i eiendom
+# Finansnæringen
+lkjsflkjsdlfj.....

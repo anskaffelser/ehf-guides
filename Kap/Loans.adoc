@@ -1,27 +1,69 @@
-== Lånefakturaer
+= Lån - faktura for termin-innkreving
 
 
-Med lånefakturaer menes fakturaer for innkreving av forfalt terminbeløp (renter og/eller avdrag). En undertype vil her være **Næringslån med pant i fast eiendom**, men prosjektgruppen har ikke funnet at denne undertypen har informasjonsbehov utover det som skisseres for generelle lånefakturaer.
+NOTE: Med lånefakturaer menes fakturaer for innkreving av forfalt terminbeløp (renter og/eller avdrag).
 
-I en lånefaktura må det oppgis informasjon om det objektet lånet er tatt opp på og låne-nummer. Typisk vil en lånefaktura bestå av fakturalinjer for renter og avdrag. Og i tillegg påløper det også ofte ett gebyr eller to.
+I en lånefaktura bør det oppgis informasjon om det objektet lånet er tatt opp på, samt låne-nummer. Typisk vil en lånefaktura bestå av fakturalinjer for renter og avdrag. Og i tillegg påløper det også ofte ett gebyr eller to.
 
-Objektet angis (på samme måte som for leasingfaktura) i `cac:AdditionalDocumentReference`, og i eksempelet under her angis gårds- og bruksnummer for låneobjektet.
+== Informasjonsbehov
+
+=== Objektreferanser
+
+Låneobjektet angis (på samme måte som for leasing) i `AdditionalDocumentReference`, med `DocumentType` = _Object_.
+
+==== Lån på eiendom
+
+Ved fakturering av terminbeløp for lån på eiendom, er det anbefalt å legge inn gårds- og bruksnummer som objektreferanse.
 
 [source,xml]
 ----
 <cac:AdditionalDocumentReference>
-<cbc:ID>245<cbc:ID>
-<cbc:DocumentType>Gnr.</cbc:DocumentType>
-</cac:AdditionalDocumentReference>
-
-<cac:AdditionalDocumentReference>
-<cbc:ID>17</cbc:ID>
-<cbc:DocumentType>Bnr.</cbc:DocumentType>
+<cbc:ID>Gnr./bnr. 245/17<cbc:ID>
+<cbc:DocumentType>Object</cbc:DocumentType>
 </cac:AdditionalDocumentReference>
 
 ----
 
-Lånenummer skal angis i en EHF faktura i elementet `cac:ContractDocumentReference/cbc:ID`:
+
+==== Lån på biler/kjøretøy med registreringsnummer
+
+Angivelse av låneobjektet ved lån på biler/kjøretøy, er identisk som ved leasing av tilsvarende objekt. Se under
+
+[source,xml]
+----
+<cac:AdditionalDocumentReference>
+<cbc:ID>Toyota Yaris, 1.3 liter<cbc:ID>
+<cbc:DocumentType>Object</cbc:DocumentType>
+</cac:AdditionalDocumentReference>
+
+<cac:AdditionalDocumentReference>
+<cbc:ID>AB12345</cbc:ID>
+<cbc:DocumentType>License</cbc:DocumentType>
+</cac:AdditionalDocumentReference>
+
+----
+
+==== Lån på anleggsmaskiner
+
+Ved fakturering av terminbeløp på lån på anleggsmaskiner, angis selve maskin-beskrivelsen som objekt (samme som for leasing av tilsvarende objekt), og dersom det er maskiner med serienummer, angis dette med `DocumentType`= _Serialnumber_
+
+[source,xml]
+----
+<cac:AdditionalDocumentReference>
+<cbc:ID>Volvo EC460 BLC<cbc:ID>
+<cbc:DocumentType>Object</cbc:DocumentType>
+</cac:AdditionalDocumentReference>
+
+<cac:AdditionalDocumentReference>
+<cbc:ID>80398</cbc:ID>
+<cbc:DocumentType>Serialnumber</cbc:DocumentType>
+</cac:AdditionalDocumentReference>
+
+----
+
+=== Lånenummer
+
+Lånenummer er viktig informasjon ved fakturering av lån, og da låneavtalen anses å være den bindende kontrakten mellom partene, angis lånenummer i elementet for kontraktsnummer, altså i `ContractDocumentReference`, slik:
 
 [source,xml]
 ----
@@ -31,29 +73,30 @@ Lånenummer skal angis i en EHF faktura i elementet `cac:ContractDocumentReferen
 
 ----
 
-Rabatter og gebyrer har egne elementer i en EHF faktura,
-og kan angis på 3 nivåer:
 
-. Dokumentnivå
-. Linjenivå
-. Prisnivå
+=== Gebyr
 
-Videre detaljer om beregninger og merverdiavgift for rabatter, finnes i
+De langt fleste lån har ulike gebyrer knyttet til seg, bl.a termingebyr.
+
+EHF har egne elementer for å angi gebyrer, og disse skal også benyttes for å angi gebyrer knyttet til en lånefaktura/ termininnkreving.
+
+
+Videre detaljer om gebyr (og rabatter), finnes i
 https://test-vefa.difi.no/ehf/guide/invoice-and-creditnote/2.0/no/beskrivelse/rabatter-og-gebyrer.html[EHF veiledningen kap.6.2]
-  
-Eksempelet under viser også angivelsen av et termingebyr på kr. 100,-
+
+Eksempelet under viser angivelsen av et termingebyr på kr. 100,-
 
 [source,xml]
 ----
 <cac:AllowanceCharge>
 	<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
-	<cbc:AllowanceChargeReasonCode listID="UNCL4465">94
-	</cbc:AllowanceChargeReasonCode>
+	<cbc:AllowanceChargeReasonCode listID="UNCL4465">11
+	</cbc:AllowanceChargeReasonCode>  <1>
 	<cbc:AllowanceChargeReason>Termingebyr</cbc:AllowanceChargeReason>
 	<cbc:Amount currencyID="NOK">100</cbc:Amount>
 	<cac:TaxCategory>
-		<cbc:ID schemeID="UNCL5305">S</cbc:ID>
-		<cbc:Percent>25</cbc:Percent>
+		<cbc:ID schemeID="UNCL5305">E</cbc:ID>
+		<cbc:Percent>0</cbc:Percent>
 		<cac:TaxScheme>
 			<cbc:ID>VAT</cbc:ID>
 		</cac:TaxScheme>
@@ -61,3 +104,4 @@ Eksempelet under viser også angivelsen av et termingebyr på kr. 100,-
 </cac:AllowanceCharge>
 
 ----
+<1> Se kodeliste http://www.unece.org/fileadmin/DAM/trade/untdid/d15b/tred/tred4465.htm[UNCL4465] for gyldige koder.
