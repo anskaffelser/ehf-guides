@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
+<!-- 
+This example file shows a valid xml for factoring. 
+Some comments has been added and is used for extracting information to the guideline document. 
+  tag::name[] end::name[]
+-->
 <Invoice xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2"
     xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" 
     xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
@@ -8,7 +12,9 @@
     <cbc:ProfileID>urn:www.cenbii.eu:profile:bii05:ver2.0</cbc:ProfileID>
     <cbc:ID>123456789</cbc:ID>
     <cbc:IssueDate>2016-03-01</cbc:IssueDate>
+    <!-- tag::type[] -->
     <cbc:InvoiceTypeCode listID="UNCL1001">393</cbc:InvoiceTypeCode>
+    <!-- end::type[] -->
     <cbc:DocumentCurrencyCode listID="ISO4217">NOK</cbc:DocumentCurrencyCode>
     <cac:ContractDocumentReference>
         <cbc:ID>Contract_123</cbc:ID>
@@ -71,6 +77,7 @@
             </cac:Contact>
         </cac:Party>
     </cac:AccountingCustomerParty>
+   <!-- tag::payee[] -->
     <cac:PayeeParty>
         <cac:PartyIdentification>
             <cbc:ID schemeID="GLN">2298740918237</cbc:ID>
@@ -82,6 +89,7 @@
             <cbc:CompanyID schemeID="NO:ORGNR">975864753</cbc:CompanyID>
         </cac:PartyLegalEntity>
     </cac:PayeeParty>
+    <!-- end::payee[] -->
     <cac:Delivery>
         <cbc:ActualDeliveryDate>2016-02-12</cbc:ActualDeliveryDate>
         <cac:DeliveryLocation>

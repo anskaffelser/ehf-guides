@@ -1,4 +1,5 @@
-= Salgsfaktura
+
+= Salgsfaktura [[Sales]]
 
 Generelle salgsfakturaer har ingen spesifikke informasjonskrav utover det som er angitt i
 https://test-vefa.difi.no/ehf/guide/invoice-and-creditnote/2.0/no/index.html[EHF Implementasjonsguide].

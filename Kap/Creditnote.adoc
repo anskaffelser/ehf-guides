@@ -1,12 +1,12 @@
+
 = Kreditnota
 
 
-Anbefalingene gitt i denne veiledningen er også gyldig for kreditnotaer. Slik at kreditering av en lånefaktura vil inneholde de samme elementene som angitt for en lånefakturaen.
+Anbefalingene gitt i denne veiledningen er også gyldig for kreditnotaer. Slik at kreditering av en lånefaktura vil inneholde de samme elementene som angitt for en lånefaktura.
 
-En EHF Kreditnota har i all hovedsak de samme informasjonselementene som en faktura. Unntaket er at kreditnota har egne element for å oppgi referanse til tilhørende fakturaer eller kreditnotaer.
+En EHF Kreditnota har i all hovedsak de samme informasjonselementene som en faktura, med unntak av at kreditnota har egne element for å oppgi referanse til tilhørende fakturaer eller kreditnotaer ({G_billingRef})
 
-For å henvise til den fakturaen som kreditnotaen gjelder for, benyttes elementet
-https://vefa.difi.no/ehf/gefeg/creditnote/2.0/gu1.htm?https://vefa.difi.no/ehf/gefeg/creditnote/2.0/gu28.htm[`InvoiceDocumentReference`]:
+For å henvise til den fakturaen som kreditnotaen gjelder for, benyttes elementet {G_invoiceRef}:
 
 [source,xml]
 ----

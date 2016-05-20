@@ -1,36 +1,40 @@
-== Forord
+= Forord
 
+Denne veiledning er en av flere veiledere som beskriver hvordan EHF faktura og kreditnota skal benyttes i ulike bransjer i det norske markedet.
 
-Denne veiledning er en av mange veiledere som beskriver hvordan EHF faktura og kreditnota skal benyttes i ulike bransjer i det norske markedet.
+== Formål
 
-=== Formål
 Formålet med dette dokumentet er å beskrive og presisere bruk av EHF faktura og kreditnota for finansnæringen i Norge.
 
-Med finansnæringen mener vi....
+Med finansnæringen mener vi banker, forsikringsselskap, kredittforetak og finansieringsselskap.
 
-=== Referanser
+== Referanser
 
-=== Begrepsdefinisjoner
+EHF Implementasjonsguide:: https://test-vefa.difi.no/ehf/guide/invoice-and-creditnote/2.0/no/[]
 
-Dokumentnivå::
-_Felles informasjon som gjelder hele fakturaen eller kreditnotaen._
+Eksempelfiler::
+https://github.com/OpenPEPPOL/finansveileder/tree/master/Examples[]
 
-Linjenivå::
-_Informasjon som gjelder en enkelt linje som inngår i en faktura eller kreditnota. Ofte benyttes også uttrykket fakturalinje eller varelinje._
+Vefa::
+https://vefa.difi.no/[]
 
-=== Fakturatyper
+PEPPOL Transport-infrastruktur::
+http://www.peppol.eu/ressource-library/technical-specifications/infrastructure-resources
+
+== Fakturatyper
+
 Følgende typer av fakturaer har prosjektet funnet i bruk i finansnæringen, og disse er analysert videre for å spesifisere informasjonsbehov og hvordan dette informasjonsbehovet kan dekkes i en EHF faktura eller kreditnota.
 
 De ulike fakturatypene gjennomgås i egne kapitler, med beskrivelser og eksempler på utfylling i EHF.
 
-. Leasing-fakturaer
+. <<Leasing>>
 * Vanlig leasing
 * Avslutningsfaktura
-* Lease build-up
-. Låne-fakturaer
+* Fakturaer for interimsleie og renter før start
+. <<Loans>>
 * Næringslån med pant i eiendom
-. Factoring
-. Salgsfaktura
-* Netting-faktura
+. <<Factoring>>
+. <<Netting>>
+. <<Sales>>
 * Lagerfinansiering
 * Ad-hoc faktura

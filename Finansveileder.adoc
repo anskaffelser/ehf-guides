@@ -1,0 +1,25 @@
+= EHF fakturaprosess, veiledening for finansnæringen
+:icons: font
+:toc: left
+:toclevels: 3
+:numbered:
+:sectlinks:
+:source-highlighter: coderay
+:sourcedir: ../finansveileder
+:imagesdir: {sourcedir}/assets
+
+Direktoratet for forvaltning og IKT, DIFI; Siw Midtgård Meckelborg
+v0.1: First draft for review
+
+:leveloffset: +1
+
+include::attributes.adoc[]
+include::{sourcedir}\Kap\Introduction.adoc[]
+include::{sourcedir}\Kap\Leasing.adoc[]
+include::{sourcedir}\Kap\Loans.adoc[]
+include::{sourcedir}\Kap\Factoring.adoc[]
+include::{sourcedir}\Kap\Sales.adoc[]
+include::{sourcedir}\Kap\Creditnote.adoc[]
+include::{sourcedir}\Kap\Netting.adoc[]
+
+:leveloffset: -1

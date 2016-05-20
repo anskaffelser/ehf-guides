@@ -1,0 +1,37 @@
+
+
+// Generelle lenker
+:CENBII: http://www.cenbii.eu/[CEN BII]
+:PEPPOL: http://www.peppol.eu[PEPPOL]
+:leasing: https://no.wikipedia.org/wiki/Leasing[leasing]
+:loan: https://no.wikipedia.org/wiki/L%C3%A5n
+:factoring: https://no.wikipedia.org/wiki/Factoring[factoring]
+:SEPA: http://ec.europa.eu/finance/payments/sepa/index_en.htm[SEPA]
+:SEPA_DD: http://www.europeanpaymentscouncil.eu/index.cfm/sepa-direct-debit/sepa-direct-debit-core-scheme-sdd-core/[SEPA direct debit]
+:UNCL4461: http://www.unece.org/fileadmin/DAM/trade/untdid/d15b/tred/tred4461.htm[UNCL4461]
+
+// GEFEG lenker
+//Faktura
+
+:G_addDocs: https://vefa.difi.no/ehf/gefeg/invoice/2.0/gu1.htm?https://vefa.difi.no/ehf/gefeg/invoice/2.0/gu30.htm[AdditionalDocumentReference]
+:G_addDocType: https://vefa.difi.no/ehf/gefeg/invoice/2.0/gu32.htm[DocumentType]
+:G_addDocID: https://vefa.difi.no/ehf/gefeg/invoice/2.0/gu31.htm[ID]
+:G_ordre: https://vefa.difi.no/ehf/gefeg/invoice/2.0/gu23.htm[OrderReference]
+:G_gebyr: https://vefa.difi.no/ehf/gefeg/invoice/2.0/gu179.htm
+:G_linje_periode: https://vefa.difi.no/ehf/gefeg/invoice/2.0/gu243.htm[InvoicePeriod]
+:G_kontrakt: https://vefa.difi.no/ehf/gefeg/invoice/2.0/gu25.htm[ContractDocumentReference]
+:G_fakturatype: https://vefa.difi.no/ehf/gefeg/invoice/2.0/gu11.htm[InvoiceTypeCode]
+:G_supplier: https://vefa.difi.no/ehf/gefeg/invoice/2.0/gu38.htm[AccountingSupplierParty]
+:G_payee: https://vefa.difi.no/ehf/gefeg/invoice/2.0/gu114.htm[PayeeParty]
+:G_paymentMeans: https://vefa.difi.no/ehf/gefeg/invoice/2.0/gu153.htm[PaymentMeans]
+:G_paymentMeansCode: https://vefa.difi.no/ehf/gefeg/invoice/2.0/gu154.htm[PaymentMeansCode]
+
+//Kreditnota
+:G_billingRef: https://vefa.difi.no/ehf/gefeg/creditnote/2.0/gu26.htm[BillingReference]
+:G_invoiceRef: https://vefa.difi.no/ehf/gefeg/creditnote/2.0/gu28.htm[InvoiceDocumentReference]
+
+// Veileder lenker
+
+:V_gebyr: https://test-vefa.difi.no/ehf/guide/invoice-and-creditnote/2.0/no/beskrivelse/rabatter-og-gebyrer.html[EHF implementasjonsguide kap.6.2]
+:V_addDocs: https://test-vefa.difi.no/ehf/guide/invoice-and-creditnote/2.0/no/beskrivelse/andre-dokumentreferanser.html[EHF implementasjonsguide kap 6.12]
+:V_roller: https://test-vefa.difi.no/ehf/guide/invoice-and-creditnote/2.0/no/beskrivelse/roller-og-aktorer.html[EHF implementasjonsguide kap 6.1]

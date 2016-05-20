@@ -1,15 +1,17 @@
-= Leasing - faktura for terminleie
+
+= Leasing - faktura for terminleie [[Leasing]]
 
 
-NOTE: Med leasingfaktura menes fakturaer for innkreving av terminleie for avtalt leieperiode. Her dekkes også leasingfakturaer som er delvis betalt samt leasing med startleie.
 
-Prosjektgruppen har også sett på **lease build-up** og på **Avslutningsfaktura / utkjøpsfaktura**. Disse to typene av fakturaer anses å være undertyper av generelle leasingfakturaer, og gruppen har ikke funnet at disse har ytterligere informasjonsbehov annet enn det som er skissert under.
+NOTE: Med {leasing}-faktura menes fakturaer for innkreving av terminleie for avtalt leieperiode. Her dekkes også leasingfakturaer som er delvis betalt samt leasing med startleie.
 
-En **proforma avslutningsfaktura / utkjøpsanmodning** anses å være en type tilbud uten fakturanummer, og faller dermed utenfor EHF.
+Prosjektgruppen har også sett på fakturaer for **interimsleie** og **renter før start**, samt på **Avslutningsfaktura / utkjøpsfaktura**. Disse typene av fakturaer anses å være undertyper av generelle leasingfakturaer, og gruppen har ikke funnet at disse har ytterligere informasjonsbehov annet enn det som er skissert under.
 
 
 == Informasjonsbehov
 
+
+////////
 === Fakturatype
 
 For at mottaker skal kunne legge tilrette for automatiserte prosesser, anbefaler vi at fakturatype i en leasingfaktura settes til verdien "394" som står for "Lease invoice".
@@ -17,16 +19,19 @@ For at mottaker skal kunne legge tilrette for automatiserte prosesser, anbefaler
 Fakturatype angis i elementet https://vefa.difi.no/ehf/gefeg/invoice/2.0/gu1.htm?https://vefa.difi.no/ehf/gefeg/invoice/2.0/gu11.htm[`InvoiceTypeCode`] slik:
 
 [source,xml]
+.Eksempel fakturatype
 ----
 <cbc:InvoiceTypeCode>394<cbc:InvoiceTypeCode>
 ----
+////////
 
 === Leasingobjektet
 
 Det er et behov og ønske om å angi informasjon om leasingobjektet på en strukturert måte i EHF, og følgende er prosjektgruppens anbefaling.
 
-Informasjon om leasing-objektet bør ikke legges i fritekst-felter, men heller angis som tilleggsdokumentasjon, og dette gjøres i elementet
-https://vefa.difi.no/ehf/gefeg/invoice/2.0/gu1.htm?https://vefa.difi.no/ehf/gefeg/invoice/2.0/gu30.htm[`AdditionalDocumentReference`], med `DocumentType` = _Object_
+Informasjon om leasing-objektet bør ikke legges i fritekst-felter, men heller angis som tilleggsdokumentasjon, og dette gjøres i elementet {G_addDocs}, med {G_addDocType} = _Object_
+
+Se også {V_addDocs}.
 
 
 
@@ -34,35 +39,27 @@ https://vefa.difi.no/ehf/gefeg/invoice/2.0/gu1.htm?https://vefa.difi.no/ehf/gefe
 
 For leasing av biler eller andre kjøretøy med registreringsnummer, anbefaler vi å oppgi både typen kjøretøy, samt registreringsnummeret.
 
-Typen kjøretøy angis i ved å sette elementet `DocumentType` til _Object_
-
-Registreringsnummer angis ved at elementet `DocumentType` får verdien _License_, og selve registreringsnummeret oppgis i `ID`.
-
-Eksempelet under viser hvordan man kan angi at leasingobjektet er en Toyota Yaris, med registreringsnummer AB12345:
+Eksempelet under viser hvordan man kan angi at leasingobjektet er en Ford Mondeo, med registreringsnummer AB12345:
 
 [source,xml]
+.Eksempel leasing av bil
 ----
-<cac:AdditionalDocumentReference>
-<cbc:ID>Toyota Yaris, 1.3 liter<cbc:ID>
-<cbc:DocumentType>Object</cbc:DocumentType>
-</cac:AdditionalDocumentReference>
-
-<cac:AdditionalDocumentReference>
-<cbc:ID>AB12345</cbc:ID>
-<cbc:DocumentType>License</cbc:DocumentType>
-</cac:AdditionalDocumentReference>
-
+include::../Source/Leasing_Forskudd.xml[tags=object]
 ----
+<1> Typen kjøretøy angis i ved å sette elementet {G_addDocType} til _Object_ i første instans av {G_addDocs}
+<2> {G_addDocType} settes til verdien _License_ i andre instans av {G_addDocs}
+<3> Selve registreringsnummeret oppgis i {G_addDocID}.
 
 ==== Anleggsmaskiner uten registreringsnummer
 
-Ved leasing av anleggsmaskiner som ikke har registreringsnummer eller serienummer, angis kun en instans av `AdditionalDocumentReference`, med `DocumentType` satt til _Object_, slik:
+Ved leasing av anleggsmaskiner som ikke har registreringsnummer eller serienummer, angis kun en instans av {G_addDocs}, med {G_addDocType} satt til _Object_ <1>, slik:
 
 [source,xml]
+.Eksempel leasing av anleggsmaskiner
 ----
 <cac:AdditionalDocumentReference>
 <cbc:ID>Caterpiller D6R LGP Dozer<cbc:ID>
-<cbc:DocumentType>Object</cbc:DocumentType>
+<cbc:DocumentType>Object</cbc:DocumentType> <1>
 </cac:AdditionalDocumentReference>
 
 ----
@@ -70,10 +67,10 @@ Ved leasing av anleggsmaskiner som ikke har registreringsnummer eller serienumme
 
 ==== Anleggsmaskiner med serienummer
 
-For anleggsmaskiner med serienummer angis selve objektet som  i eksempelet over, mens serienummer angis med `DocumentType`
-satt til _Serialnumber_. Se eksempel:
+For anleggsmaskiner med serienummer angis selve objektet som  i eksempelet over, mens serienummer angis med {G_addDocType} satt til _Serialnumber_.
 
 [source,xml]
+.Eksempel 2 leasing av anleggsmaskiner
 ----
 <cac:AdditionalDocumentReference>
 <cbc:ID>Volvo EC460 BLC<cbc:ID>
@@ -89,10 +86,10 @@ satt til _Serialnumber_. Se eksempel:
 
 ==== Skip med registreringsnummer
 
-Ved leasing av skip med registreringsnummer, benyttes samme tekst i `DocumentType` som ved leasing av bil/kjøretøy med registreringsnummer.
+Ved leasing av skip med registreringsnummer, benyttes samme tekst i {G_addDocType} som ved leasing av bil/kjøretøy med registreringsnummer.
 
-Eksempel:
 [source,xml]
+.Eksempel leasing av skip
 ----
 <cac:AdditionalDocumentReference>
 <cbc:ID>Stinger 1100Z-DPH Lasteskip<cbc:ID>
@@ -108,11 +105,18 @@ Eksempel:
 
 ==== Software og Server løsninger
 
-I tilfeller med leasing av software, servere eller annet IT-utstyr, henvises det oftest til ordrenummer/PO nummer, og ikke til et konkret leasingobjekt. I `AdditionalDocumentReference` henvises det derfor kun til ordrenummeret, og dette angis i `OrderReference`
+I tilfeller med leasing av software, servere eller annet IT-utstyr, henvises det oftest til ordrenummer/PO nummer, og ikke til et konkret leasingobjekt. I {G_addDocs} henvises det derfor kun til ordrenummeret, og dette angis i {G_ordre}.
 
-Eksempel:
 [source,xml]
+.Eksempel leasing av software
 ----
+
+<cac:OrderReference>
+	<cbc:ID>PO_12345</cbc:ID>
+</cac:OrderReference>
+
+...
+
 <cac:AdditionalDocumentReference>
 <cbc:ID>Se ordrenummer<cbc:ID>
 <cbc:DocumentType>Object</cbc:DocumentType>
@@ -120,39 +124,31 @@ Eksempel:
 
 ----
 
-[source,xml]
-----
-<cac:OrderReference>
-	<cbc:ID>PO_12345</cbc:ID>
-</cac:OrderReference>
-
-----
 
 === Fakturaperiode
 
 I en leasingfaktura er det ofte behov for å angi ulike fakturaperioder på ulike fakturalinjer. Derfor angis oftest fakturaperioden på linjenivå, ikke på dokumentnivå.
 
-Fakturaperioden angis i elementet `InvoicePeriod` slik:
+Fakturaperioden angis i elementet {G_linje_periode} slik:
 
 [source,xml]
+.Eksempel fakturaperiode på linje
 ----
-<cac:InvoicePeriod>
-	<cbc:StartDate>2014-01-16</cbc:StartDate>
-	<cbc:EndDate>2014-02-16</cbc:EndDate>
-</cac:InvoicePeriod>
-
+include::../Source/Leasing_Forskudd.xml[tags=linje]
+...
+include::../Source/Leasing_Forskudd.xml[tags=periode]
+...
 ----
 
 === Ordrenummer
 
-Ordrenummer angis i elementet `OrderReference`.
+Ordrenummer angis i elementet {G_ordre}.
 
 
 [source,xml]
+.Eksempel ordrenummer
 ----
-<cac:OrderReference>
-	<cbc:ID>PO_123456</cbc:ID>
-</cac:OrderReference>
+include::../Source/Leasing_Forskudd.xml[tags=ordre]
 
 ----
 
@@ -162,30 +158,18 @@ En leasingavtale innebærer også ofte at det skal betales en del gebyrer, bl.a 
 
 EHF har egne elementer for å angi gebyrer, og disse skal også benyttes for å angi gebyrer knyttet til en leasingfaktura.
 
-Videre detaljer om gebyr (og rabatter), finnes i
-https://test-vefa.difi.no/ehf/guide/invoice-and-creditnote/2.0/no/beskrivelse/rabatter-og-gebyrer.html[EHF veiledningen kap.6.2]
+Videre detaljer om gebyr (og rabatter), finnes i {V_gebyr} og i {G_gebyr}[implementasjonsguiden]
 
-Eksempelet under viser angivelsen av et termingebyr på kr. 100,-
+
+Eksempelet under viser angivelsen av et termingebyr på kr. 65,-
 
 [source,xml]
 ----
-<cac:AllowanceCharge>
-	<cbc:ChargeIndicator>true</cbc:ChargeIndicator>
-	<cbc:AllowanceChargeReasonCode listID="UNCL4465">11
-	</cbc:AllowanceChargeReasonCode>  <1>
-	<cbc:AllowanceChargeReason>Termingebyr</cbc:AllowanceChargeReason>
-	<cbc:Amount currencyID="NOK">100</cbc:Amount>
-	<cac:TaxCategory>
-		<cbc:ID schemeID="UNCL5305">E</cbc:ID>
-		<cbc:Percent>0</cbc:Percent>
-		<cac:TaxScheme>
-			<cbc:ID>VAT</cbc:ID>
-		</cac:TaxScheme>
-	</cac:TaxCategory>
-</cac:AllowanceCharge>
+include::../Source/Leasing_Forskudd.xml[tags=gebyr]
 
 ----
-<1> Se kodeliste http://www.unece.org/fileadmin/DAM/trade/untdid/d15b/tred/tred4465.htm[UNCL4465] for gyldige koder.
 
+== Eksempelfil
 
-Fullstendig EHF eksempelfil finnes vedlagt som *UC_finans_1.xml*
+Fullstendig EHF eksempelfil finnes vedlagt som
+link:{sourcedir}/Source/Leasing_Forskudd.xml[Leasing_Forskudd.xml]

@@ -1,30 +1,27 @@
-= Direct debit
+= Direct debit [[Netting]]
 
 NOTE: Direkt debit kalles også ofte for "netting", og innebærer at selger/leverandør trekker penger direkte fra konto hos kunde/kjøper.
 
-Direct debit/Netting vil antagelig bli mer brukt i tiden fremover, da dette er en egen definert betalingstype i
-http://ec.europa.eu/finance/payments/sepa/index_en.htm[SEPA], kalt
-http://www.europeanpaymentscouncil.eu/index.cfm/sepa-direct-debit/sepa-direct-debit-core-scheme-sdd-core/[SEPA direct debit].
+Direct debit/netting vil antagelig bli mer brukt i tiden fremover, da dette er en egen definert betalingstype i
+{SEPA}, kalt {SEPA_DD}.
 
-Direct debit/Netting kan også forekomme for leasing, lån og vanlige salgsfakturaer.
+Direct debit/netting kan også forekomme for leasing, lån og vanlige salgsfakturaer.
 
 == Informasjonsbehov
 
 ===  Betalingsmåte
 
-Ved en direct debit/netting, er det viktig at dette er tydeliggjort i elementet for betalingsmåte, `PaymentMeans`:
+Ved en direct debit/netting, er det viktig at dette er tydeliggjort i elementet for betalingsmåte, {G_paymentMeans}:
 
-Kode for betalingsmåte, `PaymentMeansCode`, skal ha verdien 49 ved direct debit.
-footnoteref:[Betaling, se kodeliste http://www.unece.org/fileadmin/DAM/trade/untdid/d15b/tred/tred4461.htm[UNCL4461]]
 
 [source,xml]
 ----
 <cac:PaymentMeans>
-		<cbc:PaymentMeansCode listID="UNCL4461">49</cbc:PaymentMeansCode>
-		<cbc:PaymentDueDate>2016-04-01</cbc:PaymentDueDate>
+		<cbc:PaymentMeansCode listID="UNCL4461">49</cbc:PaymentMeansCode> <!--1-->
+		<cbc:PaymentDueDate>2016-05-21</cbc:PaymentDueDate>
 		<cbc:PaymentID>1234567890977</cbc:PaymentID>
 		<cac:PayeeFinancialAccount>
-			<cbc:ID schemeID="IBAN">NO9386011117947</cbc:ID>
+			<cbc:ID schemeID="IBAN">NO99991088888</cbc:ID>
 			<cac:FinancialInstitutionBranch>
 			<cbc:ID>9710</cbc:ID>
 			   <cac:FinancialInstitution>
@@ -34,3 +31,4 @@ footnoteref:[Betaling, se kodeliste http://www.unece.org/fileadmin/DAM/trade/unt
 		</cac:PayeeFinancialAccount>
 	</cac:PaymentMeans>
 ----
+<1> Kode for betalingsmåte, {G_paymentMeansCode}, skal ha verdien 49 ved direct debit. (Se kodeliste {UNCL4461})
