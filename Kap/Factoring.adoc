@@ -13,7 +13,7 @@ Det er også viktig å merke seg at det kan forekomme factoring både for leasin
 
 For at mottaker skal kunne legge tilrette for automatiserte prosesser, skal fakturatype settes til verdien "393" som står for "factored  invoice".footnoteref:[fakturatype, I henhold til kodeliste UNCL 1001]
 
-Fakturatype angis i elementet {G_fakturatype} slik:
+Fakturatype angis i elementet {T10_fakturatype} slik:
 
 [source,xml]
 .Eksempel fakturatype factoring
@@ -23,7 +23,7 @@ include::../Source/Factoring.xml[tags=type]
 
 === Betalingsmottaker
 
-En factoringfaktura er som spesifisert over, en faktura der betalingsmottaker er en annen part enn selger/leverandør. I en slik faktura, angis selger som vanlig i {G_supplier}, mens betalingsmottaker (faktor) angis i elementet {G_payee}:
+En factoringfaktura er som spesifisert over, en faktura der betalingsmottaker er en annen part enn selger/leverandør. I en slik faktura, angis selger som vanlig i {T10_supplier}, mens betalingsmottaker (faktor) angis i elementet {T10_payee}:
 
 Videre beskrivelse av ulike parter i en faktura finner du i {V_roller}.
 

@@ -5,7 +5,7 @@
 :numbered:
 :sectlinks:
 :source-highlighter: coderay
-:sourcedir: ../finansveileder
+:sourcedir: .
 :imagesdir: {sourcedir}/assets
 
 Direktoratet for forvaltning og IKT, DIFI; Siw Midtgård Meckelborg
@@ -21,5 +21,6 @@ include::{sourcedir}\Kap\Factoring.adoc[]
 include::{sourcedir}\Kap\Sales.adoc[]
 include::{sourcedir}\Kap\Creditnote.adoc[]
 include::{sourcedir}\Kap\Netting.adoc[]
+include::{sourcedir}\Kap\Referanser.adoc[]
 
 :leveloffset: -1

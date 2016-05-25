@@ -1,0 +1,14 @@
+
+
+= Referanser
+
+EHF Implementasjonsguide:: https://test-vefa.difi.no/ehf/guide/invoice-and-creditnote/2.0/no/[]
+
+Eksempelfiler::
+https://github.com/OpenPEPPOL/finansveileder/tree/master/Source[]
+
+Vefa::
+https://vefa.difi.no/[]
+
+PEPPOL Transport-infrastruktur::
+http://www.peppol.eu/ressource-library/technical-specifications/infrastructure-resources

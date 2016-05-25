@@ -80,13 +80,13 @@ Some comments has been added and is used for extracting information to the guide
    <!-- tag::payee[] -->
     <cac:PayeeParty>
         <cac:PartyIdentification>
-            <cbc:ID schemeID="GLN">2298740918237</cbc:ID>
+            <cbc:ID schemeID="GLN">9876543234567</cbc:ID>
         </cac:PartyIdentification>
         <cac:PartyName>
             <cbc:Name>Faktoringselskap</cbc:Name>
         </cac:PartyName>
         <cac:PartyLegalEntity>
-            <cbc:CompanyID schemeID="NO:ORGNR">975864753</cbc:CompanyID>
+            <cbc:CompanyID schemeID="NO:ORGNR">987678567</cbc:CompanyID>
         </cac:PartyLegalEntity>
     </cac:PayeeParty>
     <!-- end::payee[] -->
@@ -109,6 +109,12 @@ Some comments has been added and is used for extracting information to the guide
         <cbc:PaymentID>KID_12344</cbc:PaymentID>
         <cac:PayeeFinancialAccount>
             <cbc:ID schemeID="BBAN">12345678909</cbc:ID>
+            <cac:FinancialInstitutionBranch>
+                <cbc:ID>9710</cbc:ID>
+                <cac:FinancialInstitution>
+                    <cbc:ID schemeID="BIC">DNBANOKK</cbc:ID>
+                </cac:FinancialInstitution>
+            </cac:FinancialInstitutionBranch>
         </cac:PayeeFinancialAccount>
     </cac:PaymentMeans>
     <cac:PaymentTerms>

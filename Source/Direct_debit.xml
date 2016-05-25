@@ -117,12 +117,13 @@ Some comments has been added and is used for extracting information to the guide
          </cac:Address>
       </cac:DeliveryLocation>
    </cac:Delivery>
+   <!--tag::payment[]-->
    <cac:PaymentMeans>
-      <cbc:PaymentMeansCode listID="UNCL4461">49</cbc:PaymentMeansCode>
-      <cbc:PaymentDueDate>2016-06-01</cbc:PaymentDueDate>
-      <cbc:PaymentID>12345000023456</cbc:PaymentID>
+      <cbc:PaymentMeansCode listID="UNCL4461">49</cbc:PaymentMeansCode> <!--1-->
+      <cbc:PaymentDueDate>2016-05-21</cbc:PaymentDueDate>
+      <cbc:PaymentID>1234567890977</cbc:PaymentID>
       <cac:PayeeFinancialAccount>
-         <cbc:ID schemeID="BBAN">12341256789</cbc:ID>
+         <cbc:ID schemeID="BBAN">99991088888</cbc:ID>
          <cac:FinancialInstitutionBranch>
             <cbc:ID>9710</cbc:ID>
             <cac:FinancialInstitution>
@@ -131,6 +132,7 @@ Some comments has been added and is used for extracting information to the guide
          </cac:FinancialInstitutionBranch>
       </cac:PayeeFinancialAccount>
    </cac:PaymentMeans>
+   <!--end::payment[]-->
    <cac:PaymentTerms>
       <cbc:Note>10 dager netto</cbc:Note>
    </cac:PaymentTerms>

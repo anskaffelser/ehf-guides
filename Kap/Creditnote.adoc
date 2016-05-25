@@ -2,18 +2,21 @@
 = Kreditnota
 
 
-Anbefalingene gitt i denne veiledningen er også gyldig for kreditnotaer. Slik at kreditering av en lånefaktura vil inneholde de samme elementene som angitt for en lånefaktura.
+Anbefalingene gitt i denne veiledningen er også gyldig for kreditnotaer. Slik at kreditering av en lånefaktura vil inneholde de samme elementene som angitt for en <<Loans,lånefaktura>>.
 
-En EHF Kreditnota har i all hovedsak de samme informasjonselementene som en faktura, med unntak av at kreditnota har egne element for å oppgi referanse til tilhørende fakturaer eller kreditnotaer ({G_billingRef})
+En EHF Kreditnota har i all hovedsak de samme informasjonselementene som en faktura, med unntak av at kreditnota har egne element for å oppgi referanse til tilhørende fakturaer eller kreditnotaer ({T14_billingRef})
 
-For å henvise til den fakturaen som kreditnotaen gjelder for, benyttes elementet {G_invoiceRef}:
+
 
 [source,xml]
+.Eksempel leasing av bil
 ----
-<cac:BillingReference>
-  <cac:InvoiceDocumentReference>
-    <cbc:ID>F123456</cbc:ID>
-  </cac:InvoiceDocumentReference>
-</cac:BillingReference>
+include::../Source/CreditNote.xml[tags=billRef]
+----
+<1> Fakturanummer
 
-----
+
+== Eksempelfil
+
+Fullstendig EHF eksempelfil finnes vedlagt som
+link:{sourcedir}/Source/CreditNote.xml[CreditNote.xml]

@@ -1,4 +1,6 @@
-= Forord
+
+
+= Introduksjon
 
 Denne veiledning er en av flere veiledere som beskriver hvordan EHF faktura og kreditnota skal benyttes i ulike bransjer i det norske markedet.
 
@@ -7,19 +9,6 @@ Denne veiledning er en av flere veiledere som beskriver hvordan EHF faktura og k
 Formålet med dette dokumentet er å beskrive og presisere bruk av EHF faktura og kreditnota for finansnæringen i Norge.
 
 Med finansnæringen mener vi banker, forsikringsselskap, kredittforetak og finansieringsselskap.
-
-== Referanser
-
-EHF Implementasjonsguide:: https://test-vefa.difi.no/ehf/guide/invoice-and-creditnote/2.0/no/[]
-
-Eksempelfiler::
-https://github.com/OpenPEPPOL/finansveileder/tree/master/Examples[]
-
-Vefa::
-https://vefa.difi.no/[]
-
-PEPPOL Transport-infrastruktur::
-http://www.peppol.eu/ressource-library/technical-specifications/infrastructure-resources
 
 == Fakturatyper
 

@@ -28,8 +28,8 @@ Some comments has been added and is used for extracting information to the guide
    <!-- end::loan[]-->
    <!-- tag::object[] -->
    <cac:AdditionalDocumentReference>
-      <cbc:ID>Gnr/bnr: 245/17</cbc:ID>
-      <cbc:DocumentType>Object</cbc:DocumentType>
+      <cbc:ID>Gnr/bnr: 245/17</cbc:ID> <!--1-->
+      <cbc:DocumentType>ACD</cbc:DocumentType>
    </cac:AdditionalDocumentReference>
    <!-- end::object[] -->
  
@@ -120,17 +120,23 @@ Some comments has been added and is used for extracting information to the guide
       <cbc:PaymentID>12345000023456</cbc:PaymentID>
       <cac:PayeeFinancialAccount>
          <cbc:ID schemeID="BBAN">12341256789</cbc:ID>
-      </cac:PayeeFinancialAccount>
+         <cac:FinancialInstitutionBranch>
+            <cbc:ID>9710</cbc:ID>
+            <cac:FinancialInstitution>
+               <cbc:ID schemeID="BIC">DNBANOKK</cbc:ID>
+            </cac:FinancialInstitution>
+         </cac:FinancialInstitutionBranch>
+      </cac:PayeeFinancialAccount>   
    </cac:PaymentMeans>
    <cac:PaymentTerms>
       <cbc:Note>10 dager netto</cbc:Note>
    </cac:PaymentTerms>
    <!-- tag::gebyr[] -->
    <cac:AllowanceCharge>
-      <cbc:ChargeIndicator>true</cbc:ChargeIndicator>
-      <cbc:AllowanceChargeReason>Termingebyr</cbc:AllowanceChargeReason>
-      <cbc:Amount currencyID="NOK">100.00</cbc:Amount>
-      <cac:TaxCategory>
+      <cbc:ChargeIndicator>true</cbc:ChargeIndicator> <!--1-->
+      <cbc:AllowanceChargeReason>Termingebyr</cbc:AllowanceChargeReason> <!--2-->
+      <cbc:Amount currencyID="NOK">100.00</cbc:Amount> <!--3-->
+      <cac:TaxCategory> <!--4-->
          <cbc:ID schemeID="UNCL5305">E</cbc:ID>
          <cbc:Percent>0.00</cbc:Percent>
          <cac:TaxScheme>

@@ -8,9 +8,19 @@ I en {loan}[lån]efaktura bør det oppgis informasjon om det objektet lånet er 
 
 == Informasjonsbehov
 
+=== Lånenummer
+
+Lånenummer er viktig informasjon ved fakturering av lån, og da låneavtalen anses å være den bindende kontrakten mellom partene, angis lånenummer i elementet for kontraktsnummer, altså i {T10_kontrakt}, slik:
+
+[source,xml]
+.Eksempel lånenummer
+----
+include::../Source/Loan.xml[tags=loan]
+----
+
 === Objektreferanser
 
-Låneobjektet angis (på samme måte som for leasing) i {G_addDocs}, med {G_addDocType} = _Object_.
+Låneobjektet angis (på samme måte som for leasing) i {T10_addDocs}, med {T10_addDocType} = `ACD`.
 
 ==== Lån på eiendom
 
@@ -21,44 +31,44 @@ Ved fakturering av terminbeløp for lån på eiendom, er det anbefalt å legge i
 ----
 include::../Source/Loan.xml[tags=object]
 ----
+<1> Gårds- og bruksnummer
+
 
 ==== Lån på biler/kjøretøy med registreringsnummer
 
-Angivelse av låneobjektet ved lån på biler/kjøretøy, er identisk som ved leasing av tilsvarende objekt. Se under
+Angivelse av låneobjektet ved lån på biler/kjøretøy, er identisk som ved leasing av tilsvarende objekt. Se under:
 
 [source,xml]
 .Eksempel lån på bil
 ----
 include::../Source/Leasing_Forskudd.xml[tags=object]
 ----
+<1> `ACD` = fakturaobjekt (Additional reference number)
+<2> `ABZ` = registreringsnummer
+<3> Selve registreringsnummeret oppgis i {T10_addDocID}.
+
 
 ==== Lån på anleggsmaskiner
 
-Ved fakturering av terminbeløp på lån på anleggsmaskiner, angis selve maskin-beskrivelsen som objekt (samme som for leasing av tilsvarende objekt), og dersom det er maskiner med serienummer, angis dette med {G_addDocType}= _Serialnumber_
+Ved fakturering av terminbeløp på lån på anleggsmaskiner, angis selve maskin-beskrivelsen som objekt (samme som for leasing av tilsvarende objekt), og dersom det er maskiner med serienummer, angis dette med {T10_addDocType}= `SE`
 
 [source,xml]
 ----
 <cac:AdditionalDocumentReference>
 <cbc:ID>Volvo EC460 BLC<cbc:ID>
-<cbc:DocumentType>Object</cbc:DocumentType>
+<cbc:DocumentType>ACD</cbc:DocumentType>
 </cac:AdditionalDocumentReference>
 
 <cac:AdditionalDocumentReference>
-<cbc:ID>80398</cbc:ID>
-<cbc:DocumentType>Serialnumber</cbc:DocumentType>
+<cbc:ID>80398</cbc:ID> <1>
+<cbc:DocumentType>SE</cbc:DocumentType> <2>
 </cac:AdditionalDocumentReference>
 
 ----
+<1> Serienummeret angis i {T10_addDocID}
+<2> {T10_addDocType} settes til verdien `SE`
 
-=== Lånenummer
 
-Lånenummer er viktig informasjon ved fakturering av lån, og da låneavtalen anses å være den bindende kontrakten mellom partene, angis lånenummer i elementet for kontraktsnummer, altså i {G_kontrakt}, slik:
-
-[source,xml]
-.Eksempel lånenummer
-----
-include::../Source/Loan.xml[tags=loan]
-----
 
 
 === Gebyr
@@ -67,7 +77,7 @@ De langt fleste lån har ulike gebyrer knyttet til seg, bl.a termingebyr.
 
 EHF har egne elementer for å angi gebyrer, og disse skal også benyttes for å angi gebyrer knyttet til en lånefaktura/ termininnkreving.
 
-Videre detaljer om gebyr (og rabatter), finnes i {V_gebyr} og i {G_gebyr}[implementasjonsguiden].
+Videre detaljer om gebyr (og rabatter), finnes i {V_gebyr} og i {T10_gebyr}[meldingstabellen].
 
 Eksempelet under viser angivelsen av et termingebyr på kr. 100,-
 
@@ -77,6 +87,10 @@ Eksempelet under viser angivelsen av et termingebyr på kr. 100,-
 ----
 include::../Source/Loan.xml[tags=gebyr]
 ----
+<1> `true` for gebyrer (false for rabatter)
+<2> Beskrivelse av gebyr
+<3> Gebyr-beløp
+<4> MVA-kategori
 
 == Eksempelfil
 

@@ -1,0 +1,5 @@
+
+
+
+:T14_billingRef: https://vefa.difi.no/ehf/gefeg/creditnote/2.0/gu26.htm[BillingReference]
+:T14_invoiceRef: https://vefa.difi.no/ehf/gefeg/creditnote/2.0/gu30.htm[InvoiceDocumentReference/ID]

@@ -1,0 +1,15 @@
+// GEFEG lenker - faktura
+
+
+:T10_addDocs: https://vefa.difi.no/ehf/gefeg/invoice/2.0/gu1.htm?https://vefa.difi.no/ehf/gefeg/invoice/2.0/gu30.htm[AdditionalDocumentReference]
+:T10_addDocType: https://vefa.difi.no/ehf/gefeg/invoice/2.0/gu32.htm[DocumentType]
+:T10_addDocID: https://vefa.difi.no/ehf/gefeg/invoice/2.0/gu31.htm[ID]
+:T10_ordre: https://vefa.difi.no/ehf/gefeg/invoice/2.0/gu23.htm[OrderReference]
+:T10_gebyr: https://vefa.difi.no/ehf/gefeg/invoice/2.0/gu179.htm
+:T10_linje_periode: https://vefa.difi.no/ehf/gefeg/invoice/2.0/gu243.htm[InvoicePeriod]
+:T10_kontrakt: https://vefa.difi.no/ehf/gefeg/invoice/2.0/gu25.htm[ContractDocumentReference]
+:T10_fakturatype: https://vefa.difi.no/ehf/gefeg/invoice/2.0/gu11.htm[InvoiceTypeCode]
+:T10_supplier: https://vefa.difi.no/ehf/gefeg/invoice/2.0/gu38.htm[AccountingSupplierParty]
+:T10_payee: https://vefa.difi.no/ehf/gefeg/invoice/2.0/gu114.htm[PayeeParty]
+:T10_paymentMeans: https://vefa.difi.no/ehf/gefeg/invoice/2.0/gu153.htm[PaymentMeans]
+:T10_paymentMeansCode: https://vefa.difi.no/ehf/gefeg/invoice/2.0/gu154.htm[PaymentMeansCode]

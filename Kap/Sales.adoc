@@ -4,12 +4,17 @@
 Generelle salgsfakturaer har ingen spesifikke informasjonskrav utover det som er angitt i
 https://test-vefa.difi.no/ehf/guide/invoice-and-creditnote/2.0/no/index.html[EHF Implementasjonsguide].
 
-Følgende varianter håndteres på samme måte som salgsfaktura, og finnes som eksempelfiler:
+Følgende varianter håndteres på samme måte som en "ordinær" salgsfaktura:
 
-#Legg inn lenker også#
 
 * Rentefaktura / forsinkelsesrente
 * Varelagerfinansiering
 * Ad-hoc faktura
 ** Avgiftsfaktura
 ** Ekstraordinære innbetalinger
+
+
+== Eksempelfil
+
+Fullstendig EHF eksempelfil finnes vedlagt som
+link:{sourcedir}/Source/Forsinkelsesrente.xml[Forsinkelsesrente.xml]

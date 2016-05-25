@@ -1,34 +1,32 @@
+
+
 = Direct debit [[Netting]]
 
 NOTE: Direkt debit kalles også ofte for "netting", og innebærer at selger/leverandør trekker penger direkte fra konto hos kunde/kjøper.
 
-Direct debit/netting vil antagelig bli mer brukt i tiden fremover, da dette er en egen definert betalingstype i
+{DirectDebit}[Direct debit] /netting vil antagelig bli mer brukt i tiden fremover, da dette er en egen definert betalingstype i
 {SEPA}, kalt {SEPA_DD}.
 
-Direct debit/netting kan også forekomme for leasing, lån og vanlige salgsfakturaer.
+Direct debit/netting kan forekomme for alle typer fakturaer, og fakturaer bør derfor følge anbefalinger gitt i øvrige kapitler i dette dokumentet.
 
 == Informasjonsbehov
 
+
 ===  Betalingsmåte
 
-Ved en direct debit/netting, er det viktig at dette er tydeliggjort i elementet for betalingsmåte, {G_paymentMeans}:
+Ved en direct debit/netting, er det viktig at dette er tydeliggjort i elementet for betalingsmåte ved å sette betalingsmåte til koden `49`, {T10_paymentMeans}:
 
+Se også {V_betaling}.
 
 [source,xml]
 ----
 <cac:PaymentMeans>
-		<cbc:PaymentMeansCode listID="UNCL4461">49</cbc:PaymentMeansCode> <!--1-->
-		<cbc:PaymentDueDate>2016-05-21</cbc:PaymentDueDate>
-		<cbc:PaymentID>1234567890977</cbc:PaymentID>
-		<cac:PayeeFinancialAccount>
-			<cbc:ID schemeID="IBAN">NO99991088888</cbc:ID>
-			<cac:FinancialInstitutionBranch>
-			<cbc:ID>9710</cbc:ID>
-			   <cac:FinancialInstitution>
-			      <cbc:ID schemeID="BIC">DNBANOKK</cbc:ID>
-			    </cac:FinancialInstitution>
-			</cac:FinancialInstitutionBranch>
-		</cac:PayeeFinancialAccount>
-	</cac:PaymentMeans>
+include::../Source/Direct_debit.xml[tags=payment]
 ----
-<1> Kode for betalingsmåte, {G_paymentMeansCode}, skal ha verdien 49 ved direct debit. (Se kodeliste {UNCL4461})
+<1> Kode for betalingsmåte, {T10_paymentMeansCode}, skal ha verdien 49 ved direct debit. (Se kodeliste {UNCL4461})
+
+
+== Eksempelfil
+
+Fullstendig EHF eksempelfil finnes vedlagt som
+link:{sourcedir}/Source/Direct_debit.xml[Direct_debit.xml]
