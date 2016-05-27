@@ -32,8 +32,8 @@ Some comments has been added and is used for extracting information to the guide
       <cbc:DocumentType>ACD</cbc:DocumentType> <!--1-->
    </cac:AdditionalDocumentReference>
    <cac:AdditionalDocumentReference>
-      <cbc:ID>AB12345</cbc:ID> <!--2-->
-      <cbc:DocumentType>ABZ</cbc:DocumentType> <!--3-->
+      <cbc:ID>AB12345</cbc:ID> <!--3-->
+      <cbc:DocumentType>ABZ</cbc:DocumentType> <!--2-->
    </cac:AdditionalDocumentReference>
    <!-- end::object[]-->
    <cac:AccountingSupplierParty>

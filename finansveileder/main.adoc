@@ -8,7 +8,7 @@
 :sourcedir: .
 :imagesdir: {sourcedir}/assets
 
-Direktoratet for forvaltning og IKT, DIFI; Siw Midtgård Meckelborg
+Direktoratet for forvaltning og IKT, DIFI;Siw Midtgård Meckelborg
 v0.9: Draft for review
 
 
