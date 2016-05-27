@@ -9,7 +9,8 @@
 :imagesdir: {sourcedir}/assets
 
 Direktoratet for forvaltning og IKT, DIFI; Siw Midtgård Meckelborg
-v0.1: First draft for review
+v0.9: Draft for review
+
 
 :leveloffset: +1
 

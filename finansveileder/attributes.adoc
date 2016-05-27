@@ -24,5 +24,5 @@ include::T14_GEFEG.adoc[]
 :V_gebyr: https://test-vefa.difi.no/ehf/guide/invoice-and-creditnote/2.0/no/beskrivelse/rabatter-og-gebyrer.html[EHF implementasjonsguide kap.6.2]
 :V_addDocs: https://test-vefa.difi.no/ehf/guide/invoice-and-creditnote/2.0/no/beskrivelse/andre-dokumentreferanser.html[EHF implementasjonsguide kap 6.12]
 :V_roller: https://test-vefa.difi.no/ehf/guide/invoice-and-creditnote/2.0/no/beskrivelse/roller-og-aktorer.html[EHF implementasjonsguide kap 6.1]
-:V_betaling:
-https://test-vefa.difi.no/ehf/guide/invoice-and-creditnote/2.0/no/beskrivelse/utfylling-av-bankkontonummer.html[EHF implementasjonsguide kap 6.16]
+
+:V_betaling: https://test-vefa.difi.no/ehf/guide/invoice-and-creditnote/2.0/no/beskrivelse/utfylling-av-bankkontonummer.html[EHF implementasjonsguide kap 6.16]
