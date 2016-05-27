@@ -1,4 +1,4 @@
-= EHF fakturaprosess, veiledening for finansnæringen
+= EHF fakturaprosess, veiledning for finansnæringen
 :icons: font
 :toc: left
 :toclevels: 3
