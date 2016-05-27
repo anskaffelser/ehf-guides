@@ -10,7 +10,8 @@
 :SEPA_DD: http://www.europeanpaymentscouncil.eu/index.cfm/sepa-direct-debit/sepa-direct-debit-core-scheme-sdd-core/[SEPA direct debit]
 :DirectDebit: https://en.wikipedia.org/wiki/Direct_debit
 :UNCL4461: http://www.unece.org/fileadmin/DAM/trade/untdid/d15b/tred/tred4461.htm[UNCL4461]
-
+:Gnr: https://no.wikipedia.org/wiki/G%C3%A5rdsnummer
+:Bnr: https://no.wikipedia.org/wiki/Bruksnummer
 :UNCL1153: http://www.unece.org/fileadmin/DAM/trade/untdid/d15b/tred/tred1153.htm[UN/CEFACTs kodeliste 1153]
 
 

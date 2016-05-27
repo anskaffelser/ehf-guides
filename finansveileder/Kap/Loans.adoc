@@ -4,7 +4,7 @@
 
 NOTE: Med lånefakturaer menes fakturaer for innkreving av terminbeløp som forfaller (renter og/eller avdrag).
 
-I en {loan}[lån]efaktura bør det oppgis informasjon om det objektet lånet er tatt opp på, samt lånenummer. Typisk vil en lånefaktura bestå av fakturalinjer for renter og avdrag. Og i tillegg påløper det også ofte ett gebyr eller to.
+I en {loan}[lånefaktura] bør det oppgis informasjon om det objektet lånet er tatt opp på, samt lånenummer. Typisk vil en lånefaktura bestå av fakturalinjer for renter og avdrag. Og i tillegg påløper det også ofte ett gebyr eller to.
 
 == Informasjonsbehov
 
@@ -24,7 +24,7 @@ Låneobjektet angis (på samme måte som for leasing) i {T10_addDocs}, med {T10_
 
 ==== Lån på eiendom
 
-Ved fakturering av terminbeløp for lån på eiendom, er det anbefalt å legge inn gårds- og bruksnummer som objektreferanse.
+Ved fakturering av terminbeløp for lån på eiendom, er det anbefalt å legge inn {Gnr}[gårds]- og {Bnr}[bruksnummer] som objektreferanse.
 
 [source,xml]
 .Eksempel lån med pant i fast eiendom
