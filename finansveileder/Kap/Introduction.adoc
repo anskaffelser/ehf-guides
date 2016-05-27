@@ -16,11 +16,11 @@ Følgende typer av fakturaer har prosjektet funnet i bruk i finansnæringen, og 
 
 De ulike fakturatypene gjennomgås i egne kapitler, med beskrivelser og eksempler på utfylling i EHF.
 
-. <<Leasing>>
+. <<Leasing,Leasing>>
 * Vanlig leasing
 * Avslutningsfaktura
 * Fakturaer for interimsleie og renter før start
-. <<Loans>>
+. <<Loans,Lån>>
 * Næringslån med pant i eiendom
 . <<Factoring>>
 . <<Netting>>
