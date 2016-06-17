@@ -31,7 +31,7 @@ Det er et behov og ønske om å angi informasjon om leasingobjektet på en struk
 
 Informasjon om leasing-objektet bør ikke legges i fritekst-felter, men heller angis som tilleggsdokumentasjon, for å muliggjøre automatisering.
 
-Det anbefales å benytte elementet {T10_addDocs}, med {T10_addDocType} = `ACD` for å angi fakturert objekt/leasing objekt. Koden `ACD` er hentet fra {UNCL1153}, og er koden for Additional reference number.
+Det anbefales å benytte elementet {T10_addDocs}, med {T10_addDocType} = `ATS` for å angi fakturert objekt/leasing objekt. Koden `ATS` er hentet fra {UNCL1153}, og er koden for External object reference.
 
 Se også {V_addDocs}.
 
@@ -48,7 +48,7 @@ Eksempelet under viser hvordan man kan angi at leasingobjektet er en Ford Mondeo
 ----
 include::../Source/Leasing_Forskudd.xml[tags=object]
 ----
-<1> `ACD` = fakturaobjekt (Additional reference number)
+<1> `ATS` = fakturaobjekt (External object reference)
 <2> `ABZ` = registreringsnummer
 <3> Selve registreringsnummeret oppgis i {T10_addDocID}.
 
@@ -61,11 +61,11 @@ Ved leasing av anleggsmaskiner som ikke har registreringsnummer eller serienumme
 ----
 <cac:AdditionalDocumentReference>
 <cbc:ID>Caterpiller D6R LGP Dozer<cbc:ID> <1>
-<cbc:DocumentType>ACD</cbc:DocumentType> <2>
+<cbc:DocumentType>ATS</cbc:DocumentType> <2>
 </cac:AdditionalDocumentReference>
 ----
 <1> Betegnelse på anleggsmaskinen
-<2> {T10_addDocType} settes til `ACD` for å angi at dette er leasingobjektet
+<2> {T10_addDocType} settes til `ATS` for å angi at dette er leasingobjektet
 
 
 ==== Anleggsmaskiner med serienummer
@@ -77,7 +77,7 @@ For anleggsmaskiner med serienummer benyttes to forekomster av {T10_addDocs}. Se
 ----
 <cac:AdditionalDocumentReference>
 <cbc:ID>Volvo EC460 BLC<cbc:ID>
-<cbc:DocumentType>ACD</cbc:DocumentType>
+<cbc:DocumentType>ATS</cbc:DocumentType>
 </cac:AdditionalDocumentReference>
 
 <cac:AdditionalDocumentReference>
@@ -100,7 +100,7 @@ Ved leasing av skip med registreringsnummer, benyttes også to forekomster av {T
 ----
 <cac:AdditionalDocumentReference>
 <cbc:ID>Stinger 1100Z-DPH Lasteskip<cbc:ID> <1>
-<cbc:DocumentType>ACD</cbc:DocumentType> <2>
+<cbc:DocumentType>ATS</cbc:DocumentType> <2>
 </cac:AdditionalDocumentReference>
 
 <cac:AdditionalDocumentReference>
@@ -110,7 +110,7 @@ Ved leasing av skip med registreringsnummer, benyttes også to forekomster av {T
 
 ----
 <1> Skipets benevnelse/type
-<2> `ACD` for å angi fakturaobjekt
+<2> `ATS` for å angi fakturaobjekt
 <3> Skipets registreringsnummer
 <4> `ABZ` = registreringsnummer
 
@@ -130,7 +130,7 @@ I tilfeller med leasing av software, servere eller annet IT-utstyr, henvises det
 
 <cac:AdditionalDocumentReference>
 <cbc:ID>Se ordrenummer<cbc:ID>
-<cbc:DocumentType>ACD</cbc:DocumentType>
+<cbc:DocumentType>ATS</cbc:DocumentType>
 </cac:AdditionalDocumentReference>
 
 ----

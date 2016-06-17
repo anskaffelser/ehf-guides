@@ -29,7 +29,7 @@ Some comments has been added and is used for extracting information to the guide
    <!-- tag::object[] -->
    <cac:AdditionalDocumentReference>
       <cbc:ID>Gnr/bnr: 245/17</cbc:ID> <!--1-->
-      <cbc:DocumentType>ACD</cbc:DocumentType>
+      <cbc:DocumentType>ATS</cbc:DocumentType>
    </cac:AdditionalDocumentReference>
    <!-- end::object[] -->
  

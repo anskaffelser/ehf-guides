@@ -20,7 +20,7 @@ include::../Source/Loan.xml[tags=loan]
 
 === Objektreferanser
 
-Låneobjektet angis (på samme måte som for leasing) i {T10_addDocs}, med {T10_addDocType} = `ACD`.
+Låneobjektet angis (på samme måte som for leasing) i {T10_addDocs}, med {T10_addDocType} = `ATS`.
 
 ==== Lån på eiendom
 
@@ -43,7 +43,7 @@ Angivelse av låneobjektet ved lån på biler/kjøretøy, er identisk som ved le
 ----
 include::../Source/Leasing_Forskudd.xml[tags=object]
 ----
-<1> `ACD` = fakturaobjekt (Additional reference number)
+<1> `ATS` = fakturaobjekt (External object reference)
 <2> `ABZ` = registreringsnummer
 <3> Selve registreringsnummeret oppgis i {T10_addDocID}.
 
@@ -56,7 +56,7 @@ Ved fakturering av terminbeløp på lån på anleggsmaskiner, angis selve maskin
 ----
 <cac:AdditionalDocumentReference>
 <cbc:ID>Volvo EC460 BLC<cbc:ID>
-<cbc:DocumentType>ACD</cbc:DocumentType>
+<cbc:DocumentType>ATS</cbc:DocumentType>
 </cac:AdditionalDocumentReference>
 
 <cac:AdditionalDocumentReference>
