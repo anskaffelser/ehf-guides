@@ -1,0 +1,55 @@
+include::settings.adoc[]
+
+= {doctitle}
+{name-difi-no}
+v{revision}
+:description: Dette dokumentet beskriver og presiserer bruk av EHF formatet for energibransjen. Med energibransjen menes i denne sammenheng kraftleverandører og nettselskaper som fakturerer strøm, nettleie og andre produkter som for eksempel bredbånd til firmakunder og privatkunder i Norge, samt mottakere av energifakturaer.
+:doctype: book
+:icons: font
+:toc: left
+:source-highlighter: coderay
+:source-language: xml
+:sectanchors:
+:sectnums:
+:sectlinks:
+:sourcedir: .
+:images-dir: ../General/images
+:example-dir: ../../eksempler
+:title-logo-image: {images-dir}/Difi_logo.jpg
+
+{description}
+
+
+
+
+:leveloffset: +1
+
+include::introduksjon\begreper.adoc[]
+include::beskrivelser\dokument\utsteder.adoc[]
+include::beskrivelser\dokument\betalingsmottaker.adoc[]
+include::beskrivelser\dokument\deres_ref.adoc[]
+include::beskrivelser\dokument\målepunkt.adoc[]
+include::beskrivelser\dokument\kontering.adoc[]
+include::beskrivelser\dokument\målernummer.adoc[]
+include::beskrivelser\dokument\periode.adoc[]
+include::beskrivelser\dokument\vedlegg.adoc[]
+include::beskrivelser\linje\elavgift_sert.adoc[]
+include::beskrivelser\linje\mva.adoc[]
+include::beskrivelser\linje\navn.adoc[]
+include::beskrivelser\linje\artikkelnummer.adoc[]
+include::beskrivelser\linje\kvantum.adoc[]
+include::beskrivelser\linje\pris.adoc[]
+include::beskrivelser\linje\målepunktid.adoc[]
+include::beskrivelser\linje\diverse.adoc[]
+include::beskrivelser\linje\periode.adoc[]
+include::beskrivelser\linje\produsent.adoc[]
+include::beskrivelser\linje\privatpersoner.adoc[]
+include::gjennomfakt/intro.adoc[]
+include::gjennomfakt/generelle_krav.adoc[]
+include::gjennomfakt/forbruker.adoc[]
+include::gjennomfakt/ex_forbruker.adoc[]
+include::gjennomfakt/ex_næringskunder.adoc[]
+include::bibliography.adoc[]
+include::annex.adoc[]
+
+:leveloffset: -1

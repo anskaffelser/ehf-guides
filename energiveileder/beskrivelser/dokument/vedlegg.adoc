@@ -1,0 +1,18 @@
+
+== Vedlegg
+
+Ett eller flere vedlegg kan knyttes til dokumentnivået i EHF. Vedlegg kan være en fysisk fil eller link til for eksempel en kundeportal.
+
+Mer informasjon om vedlegg i EHF finnes også i guiden EHF Faktura og kreditnota: https://vefa.difi.no/ehf/guide/invoice-and-creditnote/2.0/no/#_vedleggshåndtering
+
+=== «Forventet årlig uttak i målepunktet»
+Ved behov for å sende «Forventet årlig uttak i målepunktet», må dette gjøres i form av vedlegg.
+
+=== Måledata
+Måleravlesninger støttes ikke i EHF formatet og må derfor sendes som vedlegg, f.eks. i form av MSCONS eller et PDF-dokument.
+
+=== Faktura til privatkunder
+
+I «Kapittel 7. Fakturering av husholdninger» i NVEs forskrift 301 <<1>>, stilles en rekke krav til informasjonsinnhold på en faktura til husholdninger. Blant annet skal fakturaen inneholde en grafisk sammenligning av årets forbruk i hver enkelt avregningsperiode med tilsvarende periode foregående år. I tillegg skal fakturaen innehold ENOVA SF sitt telefonnummer samt annen tekstlig informasjon som for eksempel informasjon om kundens anledning til å fremme innsigelser mot fakturaen.
+
+NVEs krav til fakturering av husholdninger implementeres som PDF vedlegg eller link til «min side». Dersom vedlegget er en eksakt kopi av selve fakturaen (image), skal det angis «Commercial Invoice» som dokumenttype.

@@ -1,0 +1,60 @@
+
+=== EHF oppsett ved gjennomfakturering av forbrukere
+
+EHF oppsett ved gjennomfakturering av forbrukere skal følge andre krav i denne veilederen, med følgende tilpassinger for gjennomfakturering av forbrukere i kraftbransjen:
+
+En komplett <<_gjennomfakturering_til_privatkunder,eksempelfil>> finnes som vedlegg til denne veiledningen:
+
+
+[source,xml]
+.Informasjon om kjøper
+----
+<cac:AccountingCustomerParty> <!--1-->
+		<cac:Party>
+			<cbc:EndpointID schemeID="NO:ORGNR">987654321</cbc:EndpointID><!--1--><!--4-->
+			<cac:PartyIdentification>
+				<cbc:ID schemeID="ZZZ">269331</cbc:ID> <!--2-->
+			</cac:PartyIdentification>
+			<cac:PartyName>
+				<cbc:Name>Strømkjøperen AS</cbc:Name> <!--1--><!--3-->
+			</cac:PartyName>
+			<cac:PostalAddress>
+				<cbc:StreetName>Storgt 123</cbc:StreetName>
+				<cbc:CityName>BERGEN</cbc:CityName>
+				<cbc:PostalZone>5000</cbc:PostalZone>
+				<cac:Country>
+					<cbc:IdentificationCode listID="ISO3166-1:Alpha2">NO</cbc:IdentificationCode>
+				</cac:Country>
+			</cac:PostalAddress>
+		</cac:Party>
+	</cac:AccountingCustomerParty>
+----
+<1> Påkrevet
+<2> «Party ID» under «AccountingCustomerParty (Kjøper)» er påkrevet i EHF-faktura (det er et teknisk krav at feltet ikke er tomt), men det er ikke noe krav til innhold. Det anbefales å legge «sluttbrukers kundenummer hos nettselskapet» i elementet, men nettselskapet står fritt til å legg annen informasjon i elementet, for færrest mulig tilpasninger
+<3> Sluttbrukers navn
+<4> Kraftleverandørens organisasjonsnummer. Brukes for ruting via EHF (PEPPOL) transportinfrastruktur (ELMA).
+
+[source,xml]
+.Tilleggsinformasjon
+----
+<cac:AdditionalDocumentReference>
+		 <cbc:ID>N/A</cbc:ID> <!--1--> <!--2-->
+		 <cbc:DocumentType>elektroniskB2Cfaktura</cbc:DocumentType> <!--1--> <!--3-->
+	</cac:AdditionalDocumentReference>
+	<cac:AdditionalDocumentReference>
+		 <cbc:ID>1953-05-01</cbc:ID> <!--1--> <!--4-->
+		 <cbc:DocumentType>bithdate</cbc:DocumentType> <!--1--> <!--5-->
+	</cac:AdditionalDocumentReference>
+----
+<1> Påkrevet element
+<2> Feltet benyttes ikke ved gjennomfakturering, men er påkrevet i EHF-faktura for privatkunder. Kan inneholde
+«hva-som-helst» (f.eks. «N/A»), men det skal ikke være bærende informasjon.
+<3> Skal ha verdien «elektroniskB2Cfaktura»
+<4> Fødselsdato, skal være på format: YYYY-MM-DD (med bindestreker).
+<5> Skal ha verdien "birthdate"
+
+
+Målepunktid skal angis ved fakturering av privatkunder, og angis som beskrevet i kapittel <<mpkt,Målepunkt>>
+
+
+Kontaktinformasjon til nettselskap er valgfri informasjon i EHF-fakturaen og ikke en del av standardløsningen for EHF-formatet for gjennomfakturering av forbruker i kraftbransjen. Et eventuelt behov for formidling av kontaktinformasjon i EHF-fakturaen må håndteres i avtalen mellom nettselskapet og kraftleverandøren.

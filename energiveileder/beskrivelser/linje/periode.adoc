@@ -1,0 +1,40 @@
+
+== Periode
+
+Fra/til dato på linjenivå for å spesifisere perioden fakturalinjen gjelder. Vil være aktuell ved fakturering av linjer med ulike priser innenfor fakturaperioden.
+
+Eksempelet under viser en faktura som gjelder perioden fra 2016-08-01 til 2016-08-31 og hvor det har vært ulike priser innen denne perioden, som vist i tabellen.
+
+[cols="3,2,2,1", options="header"]
+.Fakturalinjer
+|===
+| Periode
+| Mengde
+| Pris
+| Beløp
+
+| 01-08-2016 – 10-08-2016
+| 1234,00 kWh
+| 34,85 øre/kWh
+| 439,05
+
+| 11-08-2016 – 21-08-2016
+| 1345,00 kWh
+| 33,32 øre/kWh
+| 448,15
+
+| 22-08-2016 – 31-08-2016
+| 1467,00 kWh
+| 35,12 øre/kWh
+| 515,21
+|===
+
+[source]
+----
+Linje 1:
+include::{example-dir}/snippets.xml[tags=lines]
+----
+<1> Periode for fakturalinjen
+<2> Kvantum
+<3> Pris
+<4> Linjesum (pris * kvantum)

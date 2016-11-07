@@ -1,0 +1,10 @@
+
+= Informasjon på linjenivå
+
+== Elavgift
+
+Elavgift faktureres som en egen varelinje.
+
+== Elsertifikater
+
+Elsertifikater er inkludert i kraftprisen og sendes ikke separat.

@@ -1,0 +1,12 @@
+
+=== Artikkelnummer
+
+Det er to elementer for å angi artikkelnummer på linjenivå. Selgers artikkelnummer og standard artikkelnummer. Begge er valgfrie. Standard artikkelnummer er reservert for de tilfeller hvor det foreligger et standardisert idenitfikasjonssystem, for eksempel GTIN. Brukes normalt ikke ikke i energibransjen.
+
+[source,xml]
+.Eksempel selgers artikkelnummer
+----
+<cac:SellersItemIdentification>
+  <cbc:ID>K1</cbc:ID>
+</cac:SellersItemIdentification>
+----

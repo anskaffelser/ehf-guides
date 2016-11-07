@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Eksempelfil for energifaktura, avansert
+
+                Errors:
+                NOGOV-T10-R030
+                NOGOV-T10-R026
+                NOGOV-T10-R031
+                
+                Warnings:
+                NOGOV-T10-R005
+                NOGOV-T10-R004 (10 times)
+-->
+<Invoice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+	xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<cbc:UBLVersionID>2.1</cbc:UBLVersionID>
+	<cbc:CustomizationID>urn:www.cenbii.eu:transaction:biitrns010:ver2.0:extended:urn:www.peppol.eu:bis:peppol4a:ver2.0:extended:urn:www.difi.no:ehf:faktura:ver2.0</cbc:CustomizationID>
+	<cbc:ProfileID>urn:www.cenbii.eu:profile:bii04:ver2.0</cbc:ProfileID>
+	<cbc:ID>1001589779</cbc:ID>
+	<cbc:IssueDate>2016-09-10</cbc:IssueDate>
+	<cbc:InvoiceTypeCode listID="UNCL1001">380</cbc:InvoiceTypeCode>
+	<cbc:DocumentCurrencyCode listID="ISO4217">NOK</cbc:DocumentCurrencyCode>
+	<cac:InvoicePeriod>
+		<cbc:StartDate>2016-01-01</cbc:StartDate>
+		<cbc:EndDate>2016-12-31</cbc:EndDate>
+	</cac:InvoicePeriod>
+	<cac:AccountingSupplierParty>
+		<cac:Party>
+			<cbc:EndpointID schemeID="NO:ORGNR">981915550</cbc:EndpointID>
+			<cac:PartyName>
+				<cbc:Name>E Nett AS</cbc:Name>
+			</cac:PartyName>
+			<cac:PostalAddress>
+				<cbc:StreetName>Ingeniør Rybergs gate 99</cbc:StreetName>
+				<cbc:CityName>DRAMMEN</cbc:CityName>
+				<cbc:PostalZone>3007</cbc:PostalZone>
+				<cac:Country>
+					<cbc:IdentificationCode listID="ISO3166-1:Alpha2">NO</cbc:IdentificationCode>
+				</cac:Country>
+			</cac:PostalAddress>
+			<cac:PartyTaxScheme>
+				<cbc:CompanyID schemeID="NO:VAT">981915550MVA</cbc:CompanyID>
+				<cac:TaxScheme>
+					<cbc:ID>VAT</cbc:ID>
+				</cac:TaxScheme>
+			</cac:PartyTaxScheme>
+			<cac:PartyLegalEntity>
+				<cbc:RegistrationName>EB Nett AS</cbc:RegistrationName>
+				<cbc:CompanyID schemeID="NO:ORGNR" schemeName="Foretaksregisteret">981915550</cbc:CompanyID>
+				<cac:RegistrationAddress>
+					<cbc:CityName>Drammen</cbc:CityName>
+					<cac:Country>
+						<cbc:IdentificationCode listID="ISO3166-1:Alpha2">NO</cbc:IdentificationCode>
+					</cac:Country>
+				</cac:RegistrationAddress>
+			</cac:PartyLegalEntity>
+			<cac:Contact>
+				<cbc:ID>81556330</cbc:ID>
+			</cac:Contact>
+		</cac:Party>
+	</cac:AccountingSupplierParty>
+	<cac:AccountingCustomerParty>
+		<cac:Party>
+			<cbc:EndpointID schemeID="NO:ORGNR">987654321</cbc:EndpointID>
+			<cac:PartyIdentification>
+				<cbc:ID schemeID="ZZZ">269331</cbc:ID>
+			</cac:PartyIdentification>
+			<cac:PartyName>
+				<cbc:Name>Strømkjøperen AS</cbc:Name>
+			</cac:PartyName>
+			<cac:PostalAddress>
+				<cbc:StreetName>Storgt 123</cbc:StreetName>
+				<cbc:CityName>BERGEN</cbc:CityName>
+				<cbc:PostalZone>5000</cbc:PostalZone>
+				<cac:Country>
+					<cbc:IdentificationCode listID="ISO3166-1:Alpha2">NO</cbc:IdentificationCode>
+				</cac:Country>
+			</cac:PostalAddress>
+			<cac:PartyTaxScheme>
+				<cbc:CompanyID schemeID="NO:VAT">987654321MVA</cbc:CompanyID>
+				<cac:TaxScheme>
+					<cbc:ID>VAT</cbc:ID>
+				</cac:TaxScheme>
+			</cac:PartyTaxScheme>
+			<cac:PartyLegalEntity>
+				<cbc:RegistrationName>Strømkjøperen AS</cbc:RegistrationName>
+				<cbc:CompanyID schemeID="NO:ORGNR">987654321</cbc:CompanyID>
+				<cac:RegistrationAddress>
+					<cbc:CityName>BERGEN</cbc:CityName>
+					<cac:Country>
+						<cbc:IdentificationCode listID="ISO3166-1:Alpha2">NO</cbc:IdentificationCode>
+					</cac:Country>
+				</cac:RegistrationAddress>
+			</cac:PartyLegalEntity>
+			<cac:Contact>
+				<cbc:ID>3150JD</cbc:ID>
+			</cac:Contact>
+		</cac:Party>
+	</cac:AccountingCustomerParty>
+	<cac:Delivery>
+		<cbc:ActualDeliveryDate>2016-09-01</cbc:ActualDeliveryDate>
+		<cac:DeliveryLocation>
+			<cac:Address>
+				<cbc:StreetName>Storgt</cbc:StreetName>
+				<cbc:CityName>BERGEN</cbc:CityName>
+				<cbc:PostalZone>5000</cbc:PostalZone>
+				<cac:Country>
+					<cbc:IdentificationCode listID="ISO3166-1:Alpha2">NO</cbc:IdentificationCode>
+				</cac:Country>
+			</cac:Address>
+		</cac:DeliveryLocation>
+	</cac:Delivery>
+	<cac:PaymentMeans>
+		<cbc:PaymentMeansCode listID="UNCL4461">31</cbc:PaymentMeansCode>
+		<cbc:PaymentDueDate>2016-09-25</cbc:PaymentDueDate>
+		<cbc:PaymentID>26933100102054</cbc:PaymentID>
+		<cac:PayeeFinancialAccount>
+			<cbc:ID schemeID="BBAN">70580644048</cbc:ID>
+		</cac:PayeeFinancialAccount>
+	</cac:PaymentMeans>
+	<cac:PaymentTerms>
+		<cbc:Note>Ved for sen betaling blir 8,50 % rente lagt til. Ved purring er gebyret kr.63,-</cbc:Note>
+	</cac:PaymentTerms>
+	<cac:TaxTotal>
+		<cbc:TaxAmount currencyID="NOK">1023.57</cbc:TaxAmount>
+		<cac:TaxSubtotal>
+			<cbc:TaxableAmount currencyID="NOK">4094.27</cbc:TaxableAmount>
+			<cbc:TaxAmount currencyID="NOK">1023.57</cbc:TaxAmount>
+			<cac:TaxCategory>
+				<cbc:ID schemeID="UNCL5305">S</cbc:ID>
+				<cbc:Percent>25</cbc:Percent>
+				<cac:TaxScheme>
+					<cbc:ID>VAT</cbc:ID>
+				</cac:TaxScheme>
+			</cac:TaxCategory>
+		</cac:TaxSubtotal>
+	</cac:TaxTotal>
+	<cac:LegalMonetaryTotal>
+		<cbc:LineExtensionAmount currencyID="NOK">4094.27</cbc:LineExtensionAmount>
+		<cbc:TaxExclusiveAmount currencyID="NOK">4094.27</cbc:TaxExclusiveAmount>
+		<cbc:TaxInclusiveAmount currencyID="NOK">5117.84</cbc:TaxInclusiveAmount>
+		<cbc:PayableAmount currencyID="NOK">5117.84</cbc:PayableAmount>
+	</cac:LegalMonetaryTotal>
+	<cac:InvoiceLine>
+		<cbc:ID>1</cbc:ID>
+		<cbc:InvoicedQuantity unitCode="DAY" unitCodeListID="UNECERec20">31.00</cbc:InvoicedQuantity>
+		<cbc:LineExtensionAmount currencyID="NOK">39.15</cbc:LineExtensionAmount>
+		<cbc:AccountingCost>Strøm</cbc:AccountingCost>
+		<cac:Delivery>
+			<cbc:ActualDeliveryDate>2016-12-31</cbc:ActualDeliveryDate>
+			<cac:DeliveryLocation>
+				<cbc:ID schemeID="GSRN">707057500022939815</cbc:ID>
+				<cac:Address>
+					<cbc:StreetName>Storgt 123</cbc:StreetName>
+					<cbc:CityName>BERGEN</cbc:CityName>
+					<cbc:PostalZone>5000</cbc:PostalZone>
+					<cac:Country>
+						<cbc:IdentificationCode listID="ISO3166-1:Alpha2">NO</cbc:IdentificationCode>
+					</cac:Country>
+				</cac:Address>
+			</cac:DeliveryLocation>
+		</cac:Delivery>
+		<cac:Item>
+			<cbc:Description>Fastbeløp strøm</cbc:Description>
+			<cbc:Name>Kraft</cbc:Name>
+			<cac:SellersItemIdentification>
+				<cbc:ID>K1</cbc:ID>
+			</cac:SellersItemIdentification>
+			<cac:ClassifiedTaxCategory>
+				<cbc:ID schemeID="UNCL5305">S</cbc:ID>
+				<cbc:Percent>25</cbc:Percent>
+				<cac:TaxScheme>
+					<cbc:ID>VAT</cbc:ID>
+				</cac:TaxScheme>
+			</cac:ClassifiedTaxCategory>
+		</cac:Item>
+		<cac:Price>
+			<cbc:PriceAmount currencyID="NOK">461.00</cbc:PriceAmount>
+			<cbc:BaseQuantity unitCode="DAY" unitCodeListID="UNECERec20">365</cbc:BaseQuantity>
+		</cac:Price>
+	</cac:InvoiceLine>
+	<cac:InvoiceLine>
+		<cbc:ID>2</cbc:ID>
+		<cbc:Note>Periode: 01-12-2012 - 15-12-2012. Målernummer: 008003762, Plassering: Sikringsskap
+			i gang</cbc:Note>
+		<cbc:InvoicedQuantity unitCode="KWH" unitCodeListID="UNECERec20">1178.00</cbc:InvoicedQuantity>
+		<cbc:LineExtensionAmount currencyID="NOK">170.81</cbc:LineExtensionAmount>
+		<cbc:AccountingCost>Strøm</cbc:AccountingCost>
+		<cac:Delivery>
+			<cbc:ActualDeliveryDate>2012-12-15</cbc:ActualDeliveryDate>
+			<cac:DeliveryLocation>
+				<cbc:ID schemeID="GSRN">707057500022939815</cbc:ID>
+				<cac:Address>
+					<cbc:StreetName>Storgt</cbc:StreetName>
+					<cbc:BuildingNumber>123</cbc:BuildingNumber>
+					<cbc:CityName>BERGEN</cbc:CityName>
+					<cbc:PostalZone>5000</cbc:PostalZone>
+					<cac:Country>
+						<cbc:IdentificationCode listID="ISO3166-1:Alpha2">NO</cbc:IdentificationCode>
+					</cac:Country>
+				</cac:Address>
+			</cac:DeliveryLocation>
+		</cac:Delivery>
+		<cac:Item>
+			<cbc:Description>Innkjøpspris strøm</cbc:Description>
+			<cbc:Name>Kraft</cbc:Name>
+			<cac:SellersItemIdentification>
+				<cbc:ID>K2</cbc:ID>
+			</cac:SellersItemIdentification>
+			<cac:ClassifiedTaxCategory>
+				<cbc:ID schemeID="UNCL5305">S</cbc:ID>
+				<cbc:Percent>25</cbc:Percent>
+				<cac:TaxScheme>
+					<cbc:ID>VAT</cbc:ID>
+				</cac:TaxScheme>
+			</cac:ClassifiedTaxCategory>
+		</cac:Item>
+		<cac:Price>
+			<cbc:PriceAmount currencyID="NOK">0.1450</cbc:PriceAmount>
+		</cac:Price>
+	</cac:InvoiceLine>
+	<cac:InvoiceLine>
+		<cbc:ID>3</cbc:ID>
+		<cbc:Note>Periode: 16-12-2012 - 01-01-2016. Målernummer: 008003762, Plassering: Sikringsskap
+			i gang</cbc:Note>
+		<cbc:InvoicedQuantity unitCode="KWH" unitCodeListID="UNECERec20">1267.00</cbc:InvoicedQuantity>
+		<cbc:LineExtensionAmount currencyID="NOK">162.18</cbc:LineExtensionAmount>
+		<cbc:AccountingCost>Strøm</cbc:AccountingCost>
+		<cac:Delivery>
+			<cbc:ActualDeliveryDate>2016-01-01</cbc:ActualDeliveryDate>
+			<cac:DeliveryLocation>
+				<cbc:ID schemeID="GSRN">707057500022939815</cbc:ID>
+				<cac:Address>
+					<cbc:StreetName>Storgt</cbc:StreetName>
+					<cbc:BuildingNumber>123</cbc:BuildingNumber>
+					<cbc:CityName>BERGEN</cbc:CityName>
+					<cbc:PostalZone>5000</cbc:PostalZone>
+					<cac:Country>
+						<cbc:IdentificationCode listID="ISO3166-1:Alpha2">NO</cbc:IdentificationCode>
+					</cac:Country>
+				</cac:Address>
+			</cac:DeliveryLocation>
+		</cac:Delivery>
+		<cac:Item>
+			<cbc:Description>Innkjøpspris strøm</cbc:Description>
+			<cbc:Name>Kraft</cbc:Name>
+			<cac:SellersItemIdentification>
+				<cbc:ID>K2</cbc:ID>
+			</cac:SellersItemIdentification>
+			<cac:ClassifiedTaxCategory>
+				<cbc:ID schemeID="UNCL5305">S</cbc:ID>
+				<cbc:Percent>25</cbc:Percent>
+				<cac:TaxScheme>
+					<cbc:ID>VAT</cbc:ID>
+				</cac:TaxScheme>
+			</cac:ClassifiedTaxCategory>
+		</cac:Item>
+		<cac:Price>
+			<cbc:PriceAmount currencyID="NOK">0.1280</cbc:PriceAmount>
+		</cac:Price>
+	</cac:InvoiceLine>
+	<cac:InvoiceLine>
+		<cbc:ID>4</cbc:ID>
+		<cbc:Note>Målernummer: 008003762, Plassering: Sikringsskap i gang</cbc:Note>
+		<cbc:InvoicedQuantity unitCode="KWH" unitCodeListID="UNECERec20">2445.00</cbc:InvoicedQuantity>
+		<cbc:LineExtensionAmount currencyID="NOK">681.67</cbc:LineExtensionAmount>
+		<cbc:AccountingCost>Nettleie</cbc:AccountingCost>
+		<cac:Delivery>
+			<cbc:ActualDeliveryDate>2016-01-01</cbc:ActualDeliveryDate>
+			<cac:DeliveryLocation>
+				<cbc:ID schemeID="GSRN">707057500022939815</cbc:ID>
+				<cac:Address>
+					<cbc:StreetName>Storgt</cbc:StreetName>
+					<cbc:BuildingNumber>123</cbc:BuildingNumber>
+					<cbc:CityName>BERGEN</cbc:CityName>
+					<cbc:PostalZone>5000</cbc:PostalZone>
+					<cac:Country>
+						<cbc:IdentificationCode listID="ISO3166-1:Alpha2">NO</cbc:IdentificationCode>
+					</cac:Country>
+				</cac:Address>
+			</cac:DeliveryLocation>
+		</cac:Delivery>
+		<cac:Item>
+			<cbc:Description>Energiledd nett</cbc:Description>
+			<cbc:Name>Nett</cbc:Name>
+			<cac:SellersItemIdentification>
+				<cbc:ID>N1</cbc:ID>
+			</cac:SellersItemIdentification>
+			<cac:ClassifiedTaxCategory>
+				<cbc:ID schemeID="UNCL5305">S</cbc:ID>
+				<cbc:Percent>25</cbc:Percent>
+				<cac:TaxScheme>
+					<cbc:ID>VAT</cbc:ID>
+				</cac:TaxScheme>
+			</cac:ClassifiedTaxCategory>
+		</cac:Item>
+		<cac:Price>
+			<cbc:PriceAmount currencyID="NOK">0.2788</cbc:PriceAmount>
+		</cac:Price>
+	</cac:InvoiceLine>
+	<cac:InvoiceLine>
+		<cbc:ID>5</cbc:ID>
+		<cbc:InvoicedQuantity unitCode="DAY" unitCodeListID="UNECERec20">31.00</cbc:InvoicedQuantity>
+		<cbc:LineExtensionAmount currencyID="NOK">74.74</cbc:LineExtensionAmount>
+		<cbc:AccountingCost>Nettleie</cbc:AccountingCost>
+		<cac:Delivery>
+			<cbc:ActualDeliveryDate>2016-01-01</cbc:ActualDeliveryDate>
+			<cac:DeliveryLocation>
+				<cbc:ID schemeID="GSRN">707057500022939815</cbc:ID>
+				<cac:Address>
+					<cbc:StreetName>Storgt</cbc:StreetName>
+					<cbc:BuildingNumber>123</cbc:BuildingNumber>
+					<cbc:CityName>BERGEN</cbc:CityName>
+					<cbc:PostalZone>5000</cbc:PostalZone>
+					<cac:Country>
+						<cbc:IdentificationCode listID="ISO3166-1:Alpha2">NO</cbc:IdentificationCode>
+					</cac:Country>
+				</cac:Address>
+			</cac:DeliveryLocation>
+		</cac:Delivery>
+		<cac:Item>
+			<cbc:Description>Fastledd nett</cbc:Description>
+			<cbc:Name>Nett</cbc:Name>
+			<cac:SellersItemIdentification>
+				<cbc:ID>N2</cbc:ID>
+			</cac:SellersItemIdentification>
+			<cac:ClassifiedTaxCategory>
+				<cbc:ID schemeID="UNCL5305">S</cbc:ID>
+				<cbc:Percent>25</cbc:Percent>
+				<cac:TaxScheme>
+					<cbc:ID>VAT</cbc:ID>
+				</cac:TaxScheme>
+			</cac:ClassifiedTaxCategory>
+		</cac:Item>
+		<cac:Price>
+			<cbc:PriceAmount currencyID="NOK">880.00</cbc:PriceAmount>
+			<cbc:BaseQuantity unitCode="DAY" unitCodeListID="UNECERec20">365</cbc:BaseQuantity>
+		</cac:Price>
+	</cac:InvoiceLine>
+	<cac:InvoiceLine>
+		<cbc:ID>6</cbc:ID>
+		<cbc:InvoicedQuantity unitCode="DAY" unitCodeListID="UNECERec20">31.00</cbc:InvoicedQuantity>
+		<cbc:LineExtensionAmount currencyID="NOK">39.15</cbc:LineExtensionAmount>
+		<cbc:AccountingCost>Strøm</cbc:AccountingCost>
+		<cac:Delivery>
+			<cbc:ActualDeliveryDate>2016-01-01</cbc:ActualDeliveryDate>
+			<cac:DeliveryLocation>
+				<cbc:ID schemeID="GSRN">707057500022939827</cbc:ID>
+				<cac:Address>
+					<cbc:StreetName>Storgt</cbc:StreetName>
+					<cbc:BuildingNumber>124</cbc:BuildingNumber>
+					<cbc:CityName>BERGEN</cbc:CityName>
+					<cbc:PostalZone>5000</cbc:PostalZone>
+					<cac:Country>
+						<cbc:IdentificationCode listID="ISO3166-1:Alpha2">NO</cbc:IdentificationCode>
+					</cac:Country>
+				</cac:Address>
+			</cac:DeliveryLocation>
+		</cac:Delivery>
+		<cac:Item>
+			<cbc:Description>Fastbeløp strøm</cbc:Description>
+			<cbc:Name>Kraft</cbc:Name>
+			<cac:SellersItemIdentification>
+				<cbc:ID>K1</cbc:ID>
+			</cac:SellersItemIdentification>
+			<cac:ClassifiedTaxCategory>
+				<cbc:ID schemeID="UNCL5305">S</cbc:ID>
+				<cbc:Percent>25</cbc:Percent>
+				<cac:TaxScheme>
+					<cbc:ID>VAT</cbc:ID>
+				</cac:TaxScheme>
+			</cac:ClassifiedTaxCategory>
+		</cac:Item>
+		<cac:Price>
+			<cbc:PriceAmount currencyID="NOK">461.00</cbc:PriceAmount>
+			<cbc:BaseQuantity unitCode="DAY" unitCodeListID="UNECERec20">365</cbc:BaseQuantity>
+		</cac:Price>
+	</cac:InvoiceLine>
+	<cac:InvoiceLine>
+		<cbc:ID>7</cbc:ID>
+		<cbc:Note>Periode: 01-12-2012 - 20-12-2012. Målernummer: 008003890, Plassering:
+			Loft</cbc:Note>
+		<cbc:InvoicedQuantity unitCode="KWH" unitCodeListID="UNECERec20">3965.00</cbc:InvoicedQuantity>
+		<cbc:LineExtensionAmount currencyID="NOK">575.32</cbc:LineExtensionAmount>
+		<cbc:AccountingCost>Strøm</cbc:AccountingCost>
+		<cac:Delivery>
+			<cbc:ActualDeliveryDate>2012-12-20</cbc:ActualDeliveryDate>
+			<cac:DeliveryLocation>
+				<cbc:ID schemeID="GSRN">707057500022939827</cbc:ID>
+				<cac:Address>
+					<cbc:StreetName>Storgt</cbc:StreetName>
+					<cbc:BuildingNumber>124</cbc:BuildingNumber>
+					<cbc:CityName>BERGEN</cbc:CityName>
+					<cbc:PostalZone>5000</cbc:PostalZone>
+					<cac:Country>
+						<cbc:IdentificationCode listID="ISO3166-1:Alpha2">NO</cbc:IdentificationCode>
+					</cac:Country>
+				</cac:Address>
+			</cac:DeliveryLocation>
+		</cac:Delivery>
+		<cac:Item>
+			<cbc:Description>Innkjøpspris strøm</cbc:Description>
+			<cbc:Name>Kraft</cbc:Name>
+			<cac:SellersItemIdentification>
+				<cbc:ID>K2</cbc:ID>
+			</cac:SellersItemIdentification>
+			<cac:ClassifiedTaxCategory>
+				<cbc:ID schemeID="UNCL5305">S</cbc:ID>
+				<cbc:Percent>25</cbc:Percent>
+				<cac:TaxScheme>
+					<cbc:ID>VAT</cbc:ID>
+				</cac:TaxScheme>
+			</cac:ClassifiedTaxCategory>
+		</cac:Item>
+		<cac:Price>
+			<cbc:PriceAmount currencyID="NOK">0.1451</cbc:PriceAmount>
+		</cac:Price>
+	</cac:InvoiceLine>
+	<cac:InvoiceLine>
+		<cbc:ID>8</cbc:ID>
+		<cbc:Note>Periode: 21-12-2012 - 01-01-2016. Målernummer: 008003890, Plassering:
+			Loft</cbc:Note>
+		<cbc:InvoicedQuantity unitCode="KWH" unitCodeListID="UNECERec20">2689.00</cbc:InvoicedQuantity>
+		<cbc:LineExtensionAmount currencyID="NOK">421.37</cbc:LineExtensionAmount>
+		<cbc:AccountingCost>Strøm</cbc:AccountingCost>
+		<cac:Delivery>
+			<cbc:ActualDeliveryDate>2016-01-01</cbc:ActualDeliveryDate>
+			<cac:DeliveryLocation>
+				<cbc:ID schemeID="GSRN">707057500022939827</cbc:ID>
+				<cac:Address>
+					<cbc:StreetName>Storgt</cbc:StreetName>
+					<cbc:BuildingNumber>124</cbc:BuildingNumber>
+					<cbc:CityName>BERGEN</cbc:CityName>
+					<cbc:PostalZone>5000</cbc:PostalZone>
+					<cac:Country>
+						<cbc:IdentificationCode listID="ISO3166-1:Alpha2">NO</cbc:IdentificationCode>
+					</cac:Country>
+				</cac:Address>
+			</cac:DeliveryLocation>
+		</cac:Delivery>
+		<cac:Item>
+			<cbc:Description>Innkjøpspris strøm</cbc:Description>
+			<cbc:Name>Kraft</cbc:Name>
+			<cac:SellersItemIdentification>
+				<cbc:ID>K2</cbc:ID>
+			</cac:SellersItemIdentification>
+			<cac:ClassifiedTaxCategory>
+				<cbc:ID schemeID="UNCL5305">S</cbc:ID>
+				<cbc:Percent>25</cbc:Percent>
+				<cac:TaxScheme>
+					<cbc:ID>VAT</cbc:ID>
+				</cac:TaxScheme>
+			</cac:ClassifiedTaxCategory>
+		</cac:Item>
+		<cac:Price>
+			<cbc:PriceAmount currencyID="NOK">0.1567</cbc:PriceAmount>
+		</cac:Price>
+	</cac:InvoiceLine>
+	<cac:InvoiceLine>
+		<cbc:ID>9</cbc:ID>
+		<cbc:Note>Målernummer: 008003890, Plassering: Loft</cbc:Note>
+		<cbc:InvoicedQuantity unitCode="KWH" unitCodeListID="UNECERec20">6654.00</cbc:InvoicedQuantity>
+		<cbc:LineExtensionAmount currencyID="NOK">1855.14</cbc:LineExtensionAmount>
+		<cbc:AccountingCost>Nettleie</cbc:AccountingCost>
+		<cac:Delivery>
+			<cbc:ActualDeliveryDate>2016-01-01</cbc:ActualDeliveryDate>
+			<cac:DeliveryLocation>
+				<cbc:ID schemeID="GSRN">707057500022939827</cbc:ID>
+				<cac:Address>
+					<cbc:StreetName>Storgt</cbc:StreetName>
+					<cbc:BuildingNumber>124</cbc:BuildingNumber>
+					<cbc:CityName>BERGEN</cbc:CityName>
+					<cbc:PostalZone>5000</cbc:PostalZone>
+					<cac:Country>
+						<cbc:IdentificationCode listID="ISO3166-1:Alpha2">NO</cbc:IdentificationCode>
+					</cac:Country>
+				</cac:Address>
+			</cac:DeliveryLocation>
+		</cac:Delivery>
+		<cac:Item>
+			<cbc:Description>Energiledd nett</cbc:Description>
+			<cbc:Name>Nett</cbc:Name>
+			<cac:SellersItemIdentification>
+				<cbc:ID>N1</cbc:ID>
+			</cac:SellersItemIdentification>
+			<cac:ClassifiedTaxCategory>
+				<cbc:ID schemeID="UNCL5305">S</cbc:ID>
+				<cbc:Percent>25</cbc:Percent>
+				<cac:TaxScheme>
+					<cbc:ID>VAT</cbc:ID>
+				</cac:TaxScheme>
+			</cac:ClassifiedTaxCategory>
+		</cac:Item>
+		<cac:Price>
+			<cbc:PriceAmount currencyID="NOK">0.2788</cbc:PriceAmount>
+		</cac:Price>
+	</cac:InvoiceLine>
+	<cac:InvoiceLine>
+		<cbc:ID>10</cbc:ID>
+		<cbc:InvoicedQuantity unitCode="DAY" unitCodeListID="UNECERec20">31.00</cbc:InvoicedQuantity>
+		<cbc:LineExtensionAmount currencyID="NOK">74.74</cbc:LineExtensionAmount>
+		<cbc:AccountingCost>Nettleie</cbc:AccountingCost>
+		<cac:Delivery>
+			<cbc:ActualDeliveryDate>2016-01-01</cbc:ActualDeliveryDate>
+			<cac:DeliveryLocation>
+				<cbc:ID schemeID="GSRN">707057500022939827</cbc:ID>
+				<cac:Address>
+					<cbc:StreetName>Storgt</cbc:StreetName>
+					<cbc:BuildingNumber>124</cbc:BuildingNumber>
+					<cbc:CityName>BERGEN</cbc:CityName>
+					<cbc:PostalZone>5000</cbc:PostalZone>
+					<cac:Country>
+						<cbc:IdentificationCode listID="ISO3166-1:Alpha2">NO</cbc:IdentificationCode>
+					</cac:Country>
+				</cac:Address>
+			</cac:DeliveryLocation>
+		</cac:Delivery>
+		<cac:Item>
+			<cbc:Description>Fastledd nett</cbc:Description>
+			<cbc:Name>Nett</cbc:Name>
+			<cac:SellersItemIdentification>
+				<cbc:ID>N2</cbc:ID>
+			</cac:SellersItemIdentification>
+			<cac:ClassifiedTaxCategory>
+				<cbc:ID schemeID="UNCL5305">S</cbc:ID>
+				<cbc:Percent>25</cbc:Percent>
+				<cac:TaxScheme>
+					<cbc:ID>VAT</cbc:ID>
+				</cac:TaxScheme>
+			</cac:ClassifiedTaxCategory>
+		</cac:Item>
+		<cac:Price>
+			<cbc:PriceAmount currencyID="NOK">880.00</cbc:PriceAmount>
+			<cbc:BaseQuantity unitCode="DAY" unitCodeListID="UNECERec20">365</cbc:BaseQuantity>
+		</cac:Price>
+	</cac:InvoiceLine>
+</Invoice>

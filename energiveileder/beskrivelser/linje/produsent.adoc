@@ -1,0 +1,10 @@
+
+== Produsent
+
+Benyttes ved samfakturering. Dersom en kraftleverandør kjøper nettselskapets fordring og samfakturerer sluttkunden, som dermed får ett krav fra en leverandør (kraftleverandøren) angis nettselskapet (og kraftleverandøren) som produsenter på sine respektive varelinjer.
+
+[source, xml]
+.Eksempel produsent
+----
+include::{example-dir}/snippets.xml[tags=produsent]
+----

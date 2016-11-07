@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Eksempelfil for gjennomfakturering av nettleie til privatpersoner
+-->
+<Invoice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+         xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <cbc:UBLVersionID>2.1</cbc:UBLVersionID>
+   <cbc:CustomizationID>urn:www.cenbii.eu:transaction:biitrns010:ver2.0:extended:urn:www.peppol.eu:bis:peppol4a:ver2.0:extended:urn:www.difi.no:ehf:faktura:ver2.0</cbc:CustomizationID>
+   <cbc:ProfileID>urn:www.cenbii.eu:profile:bii04:ver2.0</cbc:ProfileID>
+   <cbc:ID>INV_1541</cbc:ID>
+   <cbc:IssueDate>2016-05-30</cbc:IssueDate>
+   <cbc:InvoiceTypeCode listID="UNCL1001">380</cbc:InvoiceTypeCode>
+   <!-- Informasjon om målernummer og plassering-->
+   <cbc:Note languageID="no">Målernummer:008003762, Plassering: Sikringsskap i gang</cbc:Note>
+   <cbc:DocumentCurrencyCode listID="ISO4217">NOK</cbc:DocumentCurrencyCode>
+   <cac:InvoicePeriod>
+      <cbc:StartDate>2016-05-01</cbc:StartDate>
+      <cbc:EndDate>2016-05-31</cbc:EndDate>
+   </cac:InvoicePeriod>
+   <cac:ContractDocumentReference>
+      <cbc:ID>Contract321</cbc:ID>
+   </cac:ContractDocumentReference>
+   <!-- Henvisning til "orginalfaktura"-->
+   <cac:AdditionalDocumentReference>
+      <!--navn på dokument som id?-->
+      <cbc:ID>Invoice123.pdf</cbc:ID>
+      <!--Alltid verdien Commercial invoice -->
+      <cbc:DocumentType>Commercial invoice</cbc:DocumentType>
+      <cac:Attachment>
+         <!--Base64 encoded document-->
+         <cbc:EmbeddedDocumentBinaryObject mimeCode="application/pdf">hjW z</cbc:EmbeddedDocumentBinaryObject>
+      </cac:Attachment>
+   </cac:AdditionalDocumentReference>
+   <!-- Informasjon om nettselskapet angis i AccountingSupplierParty -->
+   <cac:AccountingSupplierParty>
+      <cac:Party>
+         <cbc:EndpointID schemeID="NO:ORGNR">810418052</cbc:EndpointID>
+         <cac:PartyIdentification>
+            <cbc:ID schemeID="GLN">1234765987654</cbc:ID>
+         </cac:PartyIdentification>
+         <cac:PartyName>
+            <cbc:Name>Nettselskapet A/S</cbc:Name>
+         </cac:PartyName>
+         <cac:PostalAddress>
+            <cbc:StreetName>Storgata 10</cbc:StreetName>
+            <cbc:CityName>OSLO</cbc:CityName>
+            <cbc:PostalZone>0101</cbc:PostalZone>
+            <cac:Country>
+               <cbc:IdentificationCode listID="ISO3166-1:Alpha2">NO</cbc:IdentificationCode>
+            </cac:Country>
+         </cac:PostalAddress>
+         <cac:PartyTaxScheme>
+            <cbc:CompanyID schemeID="NO:VAT">810418052MVA</cbc:CompanyID>
+            <cac:TaxScheme>
+               <cbc:ID>VAT</cbc:ID>
+            </cac:TaxScheme>
+         </cac:PartyTaxScheme>
+         <cac:PartyLegalEntity>
+            <cbc:RegistrationName>Nettselskapet A/S</cbc:RegistrationName>
+            <cbc:CompanyID schemeID="NO:ORGNR">810418052</cbc:CompanyID>
+            <cac:RegistrationAddress>
+               <cbc:CityName>OSLO</cbc:CityName>
+               <cac:Country>
+                  <cbc:IdentificationCode listID="ISO3166-1:Alpha2">NO</cbc:IdentificationCode>
+               </cac:Country>
+            </cac:RegistrationAddress>
+         </cac:PartyLegalEntity>
+         <cac:Contact>
+            <cbc:ID>Ola Nordmann</cbc:ID>
+         </cac:Contact>
+      </cac:Party>
+   </cac:AccountingSupplierParty>
+
+   <cac:AccountingCustomerParty>
+      <cac:Party>
+         <!-- Organisasjonsnummer til kraftselskap -->
+         <cbc:EndpointID schemeID="NO:ORGNR">986252932</cbc:EndpointID>
+         <!-- Resten av AccountingCustomerParty benyttes til å oppgi informasjon om sluttkunden -->
+         <cac:PartyIdentification>
+            <!-- f.eks. kundenummer-->
+            <cbc:ID schemeID="ZZZ">kunde123456</cbc:ID>
+         </cac:PartyIdentification>
+         <cac:PartyName>
+            <!-- Navn på sluttkunde-->
+            <cbc:Name>Firmakunde AS</cbc:Name>
+         </cac:PartyName>
+         <cac:PostalAddress>
+            <cbc:StreetName>Lilletorget 3</cbc:StreetName>
+            <cbc:CityName>SARPSBORG</cbc:CityName>
+            <cbc:PostalZone>1701</cbc:PostalZone>
+            <cac:Country>
+               <cbc:IdentificationCode listID="ISO3166-1:Alpha2">NO</cbc:IdentificationCode>
+            </cac:Country>
+         </cac:PostalAddress>
+         <cac:PartyTaxScheme>
+            <cbc:CompanyID schemeID="NO:VAT">986252932MVA</cbc:CompanyID>
+            <cac:TaxScheme>
+               <cbc:ID>VAT</cbc:ID>
+            </cac:TaxScheme>
+         </cac:PartyTaxScheme>
+         <cac:PartyLegalEntity>
+            <cbc:RegistrationName>Firmakunde AS</cbc:RegistrationName>
+            <cbc:CompanyID schemeID="NO:ORGNR">986252932</cbc:CompanyID>
+            <cac:RegistrationAddress>
+               <cbc:CityName>SARPSBORG</cbc:CityName>
+               <cac:Country>
+                  <cbc:IdentificationCode listID="ISO3166-1:Alpha2">NO</cbc:IdentificationCode>
+               </cac:Country>
+            </cac:RegistrationAddress>
+         </cac:PartyLegalEntity>
+         <cac:Contact>
+            <cbc:ID>abc1234</cbc:ID>
+         </cac:Contact>
+      </cac:Party>
+   </cac:AccountingCustomerParty>
+   <!-- Målepunktinformasjon -->
+   <cac:Delivery>
+      <!-- ActualDeliveryDate anbefales til siste dag i perioden som fakturaen gjelder for-->
+      <cbc:ActualDeliveryDate>2016-05-31</cbc:ActualDeliveryDate>
+      <cac:DeliveryLocation>
+         <!-- MålepunktID-->
+         <cbc:ID schemeID="GSRN">709876543246784</cbc:ID>
+         <cac:Address>
+            <cbc:StreetName>Lilletorget 3</cbc:StreetName>
+            <cbc:CityName>SARPSBORG</cbc:CityName>
+            <cbc:PostalZone>1701</cbc:PostalZone>
+            <cac:Country>
+               <cbc:IdentificationCode listID="ISO3166-1:Alpha2">NO</cbc:IdentificationCode>
+            </cac:Country>
+         </cac:Address>
+      </cac:DeliveryLocation>
+   </cac:Delivery>
+   <cac:PaymentMeans>
+      <cbc:PaymentMeansCode listID="UNCL4461">31</cbc:PaymentMeansCode>
+      <cbc:PaymentDueDate>2016-06-30</cbc:PaymentDueDate>
+      <cbc:PaymentChannelCode>SW</cbc:PaymentChannelCode>
+      <cbc:PaymentID>12345000023456</cbc:PaymentID>
+      <cac:PayeeFinancialAccount>
+         <cbc:ID schemeID="BBAN">12341256789</cbc:ID>
+         <cac:FinancialInstitutionBranch>
+            <cbc:ID>1234</cbc:ID>
+            <cac:FinancialInstitution>
+               <cbc:ID schemeID="BIC">ABC1234</cbc:ID>
+            </cac:FinancialInstitution>
+         </cac:FinancialInstitutionBranch>
+      </cac:PayeeFinancialAccount>
+   </cac:PaymentMeans>
+   <cac:TaxTotal>
+      <cbc:TaxAmount currencyID="NOK">250.00</cbc:TaxAmount>
+      <cac:TaxSubtotal>
+         <cbc:TaxableAmount currencyID="NOK">1000.00</cbc:TaxableAmount>
+         <cbc:TaxAmount currencyID="NOK">250.00</cbc:TaxAmount>
+         <cac:TaxCategory>
+            <cbc:ID schemeID="UNCL5305">S</cbc:ID>
+            <cbc:Percent>25.00</cbc:Percent>
+            <cac:TaxScheme>
+               <cbc:ID>VAT</cbc:ID>
+            </cac:TaxScheme>
+         </cac:TaxCategory>
+      </cac:TaxSubtotal>
+   </cac:TaxTotal>
+   <cac:LegalMonetaryTotal>
+      <cbc:LineExtensionAmount currencyID="NOK">1000.00</cbc:LineExtensionAmount>
+      <cbc:TaxExclusiveAmount currencyID="NOK">1000.00</cbc:TaxExclusiveAmount>
+      <cbc:TaxInclusiveAmount currencyID="NOK">1250.00</cbc:TaxInclusiveAmount>
+      <cbc:PayableAmount currencyID="NOK">1250.00</cbc:PayableAmount>
+   </cac:LegalMonetaryTotal>
+   <cac:InvoiceLine>
+      <cbc:ID>1</cbc:ID>
+      <!-- Fakturert antall -->
+      <cbc:InvoicedQuantity unitCode="MON" unitCodeListID="UNECERec20">1.00</cbc:InvoicedQuantity>
+      <cbc:LineExtensionAmount currencyID="NOK">1000.00</cbc:LineExtensionAmount>
+      <cbc:AccountingCost>K001201</cbc:AccountingCost>
+      <cac:OrderLineReference>
+         <cbc:LineID>1</cbc:LineID>
+      </cac:OrderLineReference>
+      <cac:Item>
+         <cbc:Name>Nettleie</cbc:Name>
+         <cac:SellersItemIdentification>
+            <cbc:ID>A23455</cbc:ID>
+         </cac:SellersItemIdentification>
+         <cac:ClassifiedTaxCategory>
+            <cbc:ID schemeID="UNCL5305">S</cbc:ID>
+            <cbc:Percent>25.00</cbc:Percent>
+            <cac:TaxScheme>
+               <cbc:ID>VAT</cbc:ID>
+            </cac:TaxScheme>
+         </cac:ClassifiedTaxCategory>
+      </cac:Item>
+      <cac:Price>
+         <cbc:PriceAmount currencyID="NOK">1000.00</cbc:PriceAmount>
+      </cac:Price>
+   </cac:InvoiceLine>
+</Invoice>

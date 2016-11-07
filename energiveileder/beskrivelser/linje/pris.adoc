@@ -1,0 +1,34 @@
+
+=== Pris
+
+Pris angis normalt i kroner med inntil 4 desimaler. Er kraftprisen for eksempel 39,35 øre/kWh settes prisen til 0,3935. Dersom prisen er angitt i en annen enhet enn kvantums-elementet, må elementet BaseQuantity benyttes som omregningsfaktor.
+
+Ved behov for flere enn 4 desimaler i pris, når for eksempel kraftprisen er 38,456 øre/kWh, angis kraftprisen i øre/kWh i pris-elementet og BaseQuantity settes til 100.
+
+[source,xml]
+.Eksempel pris
+----
+<cac:Price>
+ <cbc:PriceAmount currencyID="NOK">38.456</cbc:PriceAmount>
+ <cbc:BaseQuantity>100</cbc:BaseQuantity>
+</cac:Price>
+----
+
+[source,xml]
+.Eksempel linjeberegning
+----
+<cac:InvoiceLine>
+  <cbc:ID>1</cbc:ID>
+  <cbc:InvoicedQuantity unitCode="DAY">31.00</cbc:InvoicedQuantity> <!--1-->
+  <cbc:LineExtensionAmount currencyID="NOK">93.42</cbc:LineExtensionAmount> //<!--3-->
+...
+
+  <cac:Price>
+   <cbc:PriceAmount currencyID="NOK">1100.00</cbc:PriceAmount> //<!--2-->
+   <cbc:BaseQuantity unitCode="DAY">365</cbc:BaseQuantity>
+  </cac:Price>
+</cac:InvoiceLine>
+----
+<1> Fakturaen for en periode gjelder en måned, dvs. 31 dager.
+<2>  Fastledd nett oppgis som et beløp pr. år, kr. 1.100,00.
+<3> Totalpris på fakturalinjen blir: 31 dager * (1100 / 365) = 93,42 (Avrundet til 2 desimaler)

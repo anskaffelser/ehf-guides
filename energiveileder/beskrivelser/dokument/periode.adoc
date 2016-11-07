@@ -1,0 +1,10 @@
+
+== Periode
+
+Periode som består av startdato og sluttdato, er valgfritt i EHF. Her angis perioden som fakturaen/kreditnotaen gjelder for.
+
+[source,xml]
+.Eksempel fakturaperiode
+----
+include::{example-dir}/snippets.xml[tags=periode]
+----

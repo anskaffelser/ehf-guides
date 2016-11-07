@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Eksempelfil for energifaktura, enkel
+
+                Errors:
+                NOGOV-T10-R030
+                NOGOV-T10-R026
+                NOGOV-T10-R031
+                
+                Warnings:
+                NOGOV-T10-R005
+                NOGOV-T10-R004 (3 times)
+-->
+<Invoice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+	xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<cbc:UBLVersionID>2.1</cbc:UBLVersionID>
+	<cbc:CustomizationID>urn:www.cenbii.eu:transaction:biitrns010:ver2.0:extended:urn:www.peppol.eu:bis:peppol4a:ver2.0:extended:urn:www.difi.no:ehf:faktura:ver2.0</cbc:CustomizationID>
+	<cbc:ProfileID>urn:www.cenbii.eu:profile:bii04:ver2.0</cbc:ProfileID>
+	<cbc:ID>1001589778</cbc:ID>
+	<cbc:IssueDate>2013-09-10</cbc:IssueDate>
+	<cbc:InvoiceTypeCode listID="UNCL1001">380</cbc:InvoiceTypeCode>
+	<cbc:DocumentCurrencyCode listID="ISO4217">NOK</cbc:DocumentCurrencyCode>
+	<cac:InvoicePeriod>
+		<cbc:StartDate>2016-09-01</cbc:StartDate>
+		<cbc:EndDate>2016-09-12</cbc:EndDate>
+	</cac:InvoicePeriod>
+	<cac:AccountingSupplierParty>
+		<cac:Party>
+			<cbc:EndpointID schemeID="NO:ORGNR">981915550</cbc:EndpointID>
+			<cac:PartyName>
+				<cbc:Name>E Nett AS</cbc:Name>
+			</cac:PartyName>
+			<cac:PostalAddress>
+				<cbc:StreetName>Ingeniør Rybergs gate 99</cbc:StreetName>
+				<cbc:CityName>DRAMMEN</cbc:CityName>
+				<cbc:PostalZone>3007</cbc:PostalZone>
+				<cac:Country>
+					<cbc:IdentificationCode listID="ISO3166-1:Alpha2">NO</cbc:IdentificationCode>
+				</cac:Country>
+			</cac:PostalAddress>
+			<cac:PartyTaxScheme>
+				<cbc:CompanyID schemeID="NO:VAT">981915550MVA</cbc:CompanyID>
+				<cac:TaxScheme>
+					<cbc:ID>VAT</cbc:ID>
+				</cac:TaxScheme>
+			</cac:PartyTaxScheme>
+			<cac:PartyLegalEntity>
+				<cbc:RegistrationName>E Nett AS</cbc:RegistrationName>
+				<cbc:CompanyID schemeID="NO:ORGNR" schemeName="Foretaksregisteret">981915550</cbc:CompanyID>
+				<cac:RegistrationAddress>
+					<cbc:CityName>Drammen</cbc:CityName>
+					<cac:Country>
+						<cbc:IdentificationCode listID="ISO3166-1:Alpha2">NO</cbc:IdentificationCode>
+					</cac:Country>
+				</cac:RegistrationAddress>
+			</cac:PartyLegalEntity>
+			<cac:Contact>
+				<cbc:ID>Jens Jensen</cbc:ID>
+			</cac:Contact>
+		</cac:Party>
+	</cac:AccountingSupplierParty>
+	<cac:AccountingCustomerParty>
+		<cac:Party>
+			<cbc:EndpointID schemeID="NO:ORGNR">987654321</cbc:EndpointID>
+			<cac:PartyIdentification>
+				<cbc:ID schemeID="ZZZ">269331</cbc:ID>
+			</cac:PartyIdentification>
+			<cac:PartyName>
+				<cbc:Name>Strømkjøperen AS</cbc:Name>
+			</cac:PartyName>
+			<cac:PostalAddress>
+				<cbc:Postbox>123</cbc:Postbox>
+				<cbc:StreetName>Storgt</cbc:StreetName>
+				<cbc:CityName>BERGEN</cbc:CityName>
+				<cbc:PostalZone>5000</cbc:PostalZone>
+				<cac:Country>
+					<cbc:IdentificationCode listID="ISO3166-1:Alpha2">NO</cbc:IdentificationCode>
+				</cac:Country>
+			</cac:PostalAddress>
+			<cac:PartyTaxScheme>
+				<cbc:CompanyID schemeID="NO:VAT">987654321MVA</cbc:CompanyID>
+				<cac:TaxScheme>
+					<cbc:ID>VAT</cbc:ID>
+				</cac:TaxScheme>
+			</cac:PartyTaxScheme>
+			<cac:PartyLegalEntity>
+				<cbc:RegistrationName>Strømkjøperen AS</cbc:RegistrationName>
+				<cbc:CompanyID schemeID="NO:ORGNR">987654321</cbc:CompanyID>
+				<cac:RegistrationAddress>
+					<cbc:CityName>BERGEN</cbc:CityName>
+					<cac:Country>
+						<cbc:IdentificationCode listID="ISO3166-1:Alpha2">NO</cbc:IdentificationCode>
+					</cac:Country>
+				</cac:RegistrationAddress>
+			</cac:PartyLegalEntity>
+			<cac:Contact>
+				<cbc:ID>3150bdn</cbc:ID>
+				<cbc:Telephone>55121230</cbc:Telephone>
+				<cbc:Telefax>55121231</cbc:Telefax>
+				<cbc:ElectronicMail>john@firmaet.no</cbc:ElectronicMail>
+			</cac:Contact>
+		</cac:Party>
+	</cac:AccountingCustomerParty>
+	<cac:Delivery>
+		<cbc:ActualDeliveryDate>2016-09-01</cbc:ActualDeliveryDate>
+		<cac:DeliveryLocation>
+			<cbc:ID schemeID="GSRN">707057500022939815</cbc:ID>
+			<cac:Address>
+				<cbc:StreetName>Storgt</cbc:StreetName>
+				<cbc:CityName>BERGEN</cbc:CityName>
+				<cbc:PostalZone>5000</cbc:PostalZone>
+				<cac:Country>
+					<cbc:IdentificationCode listID="ISO3166-1:Alpha2">NO</cbc:IdentificationCode>
+				</cac:Country>
+			</cac:Address>
+		</cac:DeliveryLocation>
+	</cac:Delivery>
+	<cac:PaymentMeans>
+		<cbc:PaymentMeansCode listID="UNCL4461">31</cbc:PaymentMeansCode>
+		<cbc:PaymentDueDate>2016-09-25</cbc:PaymentDueDate>
+		<cbc:PaymentID>26933100102054</cbc:PaymentID>
+		<cac:PayeeFinancialAccount>
+			<cbc:ID schemeID="BBAN">70580644048</cbc:ID>
+		</cac:PayeeFinancialAccount>
+	</cac:PaymentMeans>
+	<cac:PaymentTerms>
+		<cbc:Note>Ved for sen betaling blir 8,50 % rente lagt til. Ved purring er gebyret kr.63,-</cbc:Note>
+	</cac:PaymentTerms>
+	<cac:TaxTotal>
+		<cbc:TaxAmount currencyID="NOK">381.07</cbc:TaxAmount>
+		<cac:TaxSubtotal>
+			<cbc:TaxableAmount currencyID="NOK">1524.26</cbc:TaxableAmount>
+			<cbc:TaxAmount currencyID="NOK">381.07</cbc:TaxAmount>
+			<cac:TaxCategory>
+				<cbc:ID schemeID="UNCL5305">S</cbc:ID>
+				<cbc:Percent>25</cbc:Percent>
+				<cac:TaxScheme>
+					<cbc:ID>VAT</cbc:ID>
+				</cac:TaxScheme>
+			</cac:TaxCategory>
+		</cac:TaxSubtotal>
+	</cac:TaxTotal>
+	<cac:LegalMonetaryTotal>
+		<cbc:LineExtensionAmount currencyID="NOK">1524.26</cbc:LineExtensionAmount>
+		<cbc:TaxExclusiveAmount currencyID="NOK">1524.26</cbc:TaxExclusiveAmount>
+		<cbc:TaxInclusiveAmount currencyID="NOK">1905.33</cbc:TaxInclusiveAmount>
+		<cbc:PayableAmount currencyID="NOK">1905.33</cbc:PayableAmount>
+	</cac:LegalMonetaryTotal>
+	<cac:InvoiceLine>
+		<cbc:ID>1</cbc:ID>
+		<cbc:Note>Målernummer: 008003762, Plassering: Sikringsskap i gang</cbc:Note>
+		<cbc:InvoicedQuantity unitCode="KWH" unitCodeListID="UNECERec20">3768.00</cbc:InvoicedQuantity>
+		<cbc:LineExtensionAmount currencyID="NOK">1050.52</cbc:LineExtensionAmount>
+		<cbc:AccountingCost>Nettleie</cbc:AccountingCost>
+		<cac:Item>
+			<cbc:Description>Energiledd nett</cbc:Description>
+			<cbc:Name>Nett</cbc:Name>
+			<cac:SellersItemIdentification>
+				<cbc:ID>N1</cbc:ID>
+			</cac:SellersItemIdentification>
+			<cac:ClassifiedTaxCategory>
+				<cbc:ID schemeID="UNCL5305">S</cbc:ID>
+				<cbc:Percent>25</cbc:Percent>
+				<cac:TaxScheme>
+					<cbc:ID>VAT</cbc:ID>
+				</cac:TaxScheme>
+			</cac:ClassifiedTaxCategory>
+		</cac:Item>
+		<cac:Price>
+			<cbc:PriceAmount currencyID="NOK">0.2788</cbc:PriceAmount>
+		</cac:Price>
+	</cac:InvoiceLine>
+	<cac:InvoiceLine>
+		<cbc:ID>2</cbc:ID>
+		<cbc:InvoicedQuantity unitCode="DAY" unitCodeListID="UNECERec20">31.00</cbc:InvoicedQuantity>
+		<cbc:LineExtensionAmount currencyID="NOK">74.74</cbc:LineExtensionAmount>
+		<cbc:AccountingCost>Nettleie</cbc:AccountingCost>
+		<cac:Item>
+			<cbc:Description>Fastledd nett</cbc:Description>
+			<cbc:Name>Nett</cbc:Name>
+			<cac:SellersItemIdentification>
+				<cbc:ID>N2</cbc:ID>
+			</cac:SellersItemIdentification>
+			<cac:ClassifiedTaxCategory>
+				<cbc:ID schemeID="UNCL5305">S</cbc:ID>
+				<cbc:Percent>25</cbc:Percent>
+				<cac:TaxScheme>
+					<cbc:ID>VAT</cbc:ID>
+				</cac:TaxScheme>
+			</cac:ClassifiedTaxCategory>
+		</cac:Item>
+		<cac:Price>
+			<cbc:PriceAmount currencyID="NOK">880.00</cbc:PriceAmount>
+			<cbc:BaseQuantity unitCode="DAY" unitCodeListID="UNECERec20">365</cbc:BaseQuantity>
+		</cac:Price>
+	</cac:InvoiceLine>
+	<cac:InvoiceLine>
+		<cbc:ID>3</cbc:ID>
+		<cbc:InvoicedQuantity unitCode="MON" unitCodeListID="UNECERec20">1.00</cbc:InvoicedQuantity>
+		<cbc:LineExtensionAmount currencyID="NOK">399.00</cbc:LineExtensionAmount>
+		<cbc:AccountingCost>Bredbånd</cbc:AccountingCost>
+		<cac:Item>
+			<cbc:Description>Internett 120 (60/60 Mbps) 3P</cbc:Description>
+			<cbc:Name>Fiberbredbånd</cbc:Name>
+			<cac:SellersItemIdentification>
+				<cbc:ID>B1</cbc:ID>
+			</cac:SellersItemIdentification>
+			<cac:ClassifiedTaxCategory>
+				<cbc:ID schemeID="UNCL5305">S</cbc:ID>
+				<cbc:Percent>25</cbc:Percent>
+				<cac:TaxScheme>
+					<cbc:ID>VAT</cbc:ID>
+				</cac:TaxScheme>
+			</cac:ClassifiedTaxCategory>
+		</cac:Item>
+		<cac:Price>
+			<cbc:PriceAmount currencyID="NOK">399.00</cbc:PriceAmount>
+		</cac:Price>
+	</cac:InvoiceLine>
+</Invoice>

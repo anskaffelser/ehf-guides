@@ -1,0 +1,42 @@
+
+
+[appendix]
+= Eksempelfiler
+
+Vedlagt til dette dokumentet er det fire fakturafiler i EHF format:
+
+.  <<_enkel_energifaktura,Enkel avregningsfaktura>> for ett målepunkt og en periode. Inneholder nettleie og bredbåndsprodukt.
+
+.  <<_avansert_energifaktura,Avansert avregningsfaktura>> for flere målepunkt og ulike priser i fakturaperioden. Inneholder nettleie og kraft.
+
+.  <<_gjennomfakturering_til_privatkunder,Gjennomfakturering til privatkunder>> som inneholder elementer ved gjennomfakturering til privatkunder.
+
+.  <<_gjennomfakturering_til_bedriftskunder,Gjennomfakturering til bedriftskunder>> som inneholder elementer ved gjennomfakturering til bedriftskunder.
+
+== Enkel energifaktura
+[source,xml]
+.Enkel energifaktura
+----
+include::eksempler/Energifaktura_enkel.xml[]
+----
+
+== Avansert energifaktura
+[source,xml]
+.Avansert energifaktura
+----
+include::eksempler/Energifaktura_avansert.xml[]
+----
+
+== Gjennomfakturering til privatkunder
+[source,xml]
+.Gjennomfakturering, privatkunder
+----
+include::eksempler/EHF_eksempel_gjennomfakturering_privatkunder.xml[]
+----
+
+== Gjennomfakturering til bedriftskunder
+[source,xml]
+.Gjennomfakturering, bedriftskunder
+----
+include::eksempler/EHF_eksempel_gjennomfakturering_bedriftskunde.xml[]
+----

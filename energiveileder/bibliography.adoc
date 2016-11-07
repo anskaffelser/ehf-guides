@@ -1,0 +1,14 @@
+
+= Referanser
+
+[bibliography]
+
+- [[[1]]]	Forskrift om måling, avregning, fakturering av nettjenester og elektrisk energi, nettselskapets nøytralitet mv. av 11. mars 1999
+https://lovdata.no/dokument/SF/forskrift/1999-03-11-301
+
+- [[[2]]] Forskrift om prisopplysning for varer og tjenester av 16. november 2012, prisopplysningsforskriften. Kapittel 6 Særlig om prisopplysning for transport og salg av elektrisk kraft.
+
+- [[[3]]] http://publikasjoner.nve.no/rapport/2016/rapport2016_48.pdf
+
+- [[[4]]] EHF Faktura og kreditnota
+https://vefa.difi.no/ehf/guide/invoice-and-creditnote/2.0/no/

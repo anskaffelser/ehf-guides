@@ -1,0 +1,7 @@
+
+== MålepunktID
+
+Gjelder fakturaen flere målepunkt, angis målepunktID i elementet `<cac:Delivery>` på linjenivå, og
+identifikator-elementet under leveringssted på dokumentnivå fylles ikke ut.
+
+Som <<_eksempelfiler,vedlegg>> til denne veilederen finnes det en avansert eksempelfil som inneholder flere målepunktID.

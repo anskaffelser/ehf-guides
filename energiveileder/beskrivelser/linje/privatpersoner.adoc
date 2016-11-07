@@ -1,0 +1,4 @@
+
+== Faktura mot privatkunder (B2C)
+
+EHF formatet støtter fakturering av privatkunder (B2C).

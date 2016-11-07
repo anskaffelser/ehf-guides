@@ -1,0 +1,19 @@
+
+== Forbruk
+
+Informasjon om forbruk, enten virkelig eller stipulert samt faste avgifter og eventuelt andre produkter og tjenester angis på linjenivå i EHF formatet. En linje pr. periode/ «produkt» (Kraft, nettleie, andre tjenester og produkter) og pris.
+
+=== Navn og beskrivelse
+
+Det er to elementer på linjenivå for å beskrive hva det er som faktureres. «Kortnavn» (Name) og et «Fritekstfelt» (Description) som kan inneholde tilnærmet ubegrenset mengde med tekst.
+
+Kortnavn `<cbc:Name>`:: benyttes til navn på varen som er solgt, eks ”Kraft til Markedspris”
+
+Fritekstfelt `<cbc:Description>`:: kan inneholde tilnærmet ubegrenset mengde med tekst. Benyttes til annen informasjon knyttet til fakturalinjen. Aktuell informasjon kan for eksempel være "Stander: Fra-stand – Til-stand".
+
+[source,xml]
+.Eksempel
+----
+<cbc:Description>Stander, Fra – Til: 697296 – 701064</cbc:Description>
+<cbc:Name>Kraft til markedspris</cbc:Name>
+----

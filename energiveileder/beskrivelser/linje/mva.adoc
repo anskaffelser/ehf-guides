@@ -1,0 +1,16 @@
+
+== MVA satser
+
+Moms sats er knyttet til den enkelte vare (item) på en varelinje.
+
+[source,xml]
+.Eksempel mva på fakturalinje
+----
+<cac:ClassifiedTaxCategory>
+  <cbc:ID schemeID="UNCL5305">S</cbc:ID>
+  <cbc:Percent>25</cbc:Percent>
+  <cac:TaxScheme>
+    <cbc:ID>VAT</cbc:ID>
+  </cac:TaxScheme>
+</cac:ClassifiedTaxCategory>
+----

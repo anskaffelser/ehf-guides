@@ -1,0 +1,14 @@
+
+= Gjennomfakturering
+
+NVE har i Rapport nr. 48-2016 «Endring i forskrift om måling, avregning, fakturering av nettjenester og elektrisk energi, nettselskapets nøytralitet mv. - Endringer vedrørende gjennomfakturering - Oppsummering av høringsuttalelser og endelig forskriftstekst», fra mai 2016, vedtatt at forskriftstekst vedrørende gjennomfakturering skal tre i kraft fra 1. september 2016. <<3>>
+
+I henhold til avregningsforskriften <<1>> § 7-4b bokstav b skal informasjonsutveksling ved
+gjennomfakturering skje ved bruk av de formater og protokoller, og innenfor de tidsrammer som er
+fastsatt av Systemstøtten for Ediel. Videre sier avregningsforskriften <<1>> at Elektronisk handelsformat
+(EHF) skal være standard elektronisk format for distribusjon av faktura for nettjenester og
+fakturagrunnlag til kraftleverandør og at målepunkt-ID skal benyttes i oversendelsen for å identifisere
+sluttbrukeren.
+
+NEE har derfor gjennomført et prosjekt for å beskrive hvilke krav som skal gjelde for et standard EHF format
+for gjennomfakturering i det norske kraftmarkedet.

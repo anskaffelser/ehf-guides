@@ -1,0 +1,20 @@
+
+== Spesielt for gjennomfakturering til forbruker (privatkunder) ved bruk av standardløsning
+
+«Standardløsningen» som beskrives her er en løsning som må håndteres (tilbys) av alle nettselskap og alle kraftleverandører som ønsker å tilby gjennomfakturering.
+
+* I standardløsningen skal nettselskapets originalfaktura overføres som pdf-vedlegg:
+** Det er sluttbruker som er «kunden» i pdf-vedlegget
+** Betalingsinformasjon må fjernes i pdf vedlegg til forbruker, siden forbruker skal
+betale til kraftleverandør og ikke til nettselskapet
+** Originalfakturaen overføres som pdf-vedlegg i Base64 format, se eksempel i Vedlegg A og Vedlegg B, samt EHF Faktura og kreditnota <<4>>.
+
+* I standardløsningene er det KUN ett målepunkt i hver EHF-faktura, fordi fakturamottaker (forbruker) må ligge på hodenivå i EHF-fakturaen
+
+* Overføring av kontaktinformasjon til nettselskap er ikke en del av standardløsningen for EHFformatet for gjennomfakturering av forbruker:
+
+** Dette håndteres i avtalen mellom nettselskapet og kraftleverandøren
+
+** Kontaktinformasjon til nettselskap er valgfri informasjon i EHF-fakturaen.
+
+** Det er i dag ingen kryptering mellom aksesspunktene i EHF-systemet.

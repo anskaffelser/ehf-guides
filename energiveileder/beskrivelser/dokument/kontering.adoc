@@ -1,0 +1,10 @@
+
+== Konteringsinformasjon
+
+Konteringsinformasjon, kundens kontostreng i regnskapssystemet, er valgfritt og legges i elementet AccountingCost. Innhold må være strukturert i henhold til mottakers krav.
+
+[source,xml]
+.Eksempel på Konteringsinformasjon
+----
+<cbc:AccountingCost>P43245 345 123</cbc:AccountingCost>
+----

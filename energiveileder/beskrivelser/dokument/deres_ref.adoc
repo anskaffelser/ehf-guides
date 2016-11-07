@@ -1,0 +1,12 @@
+
+== Deres referanse (Fakturamerke)
+
+Deres referanse (Fakturamerke) er obligatorisk å fylle ut. Elementet angis i identifikator-elementet `cbc:ID` under kontaktinformasjon for kunde. Innhold kan være identifikator som angir kundens referanse, f.eks ansattnummer, navn på kontaktperson eller avdeling hos kunde.
+
+[source,xml]
+.Eksempel på deres referanse
+----
+ <cac:Contact>
+    <cbc:ID>3150JD</cbc:ID>
+ </cac:Contact>
+----

@@ -1,0 +1,21 @@
+
+=== Kvantum
+Legges i antallselementet på linjenivå. Enhet legges som attributt til elementet. Relevante enhetskoder for energibransjen er:
+
+[horizontal]
+KWH:: Kilowatt time (kWh)
+KWT:: Kilowatt
+MWH:: MegaWatt time (MWh)
+WHR:: Watt time (Wh)
+DAY:: Dager
+MON:: Måneder
+ANN:: År
+NAR:: Stykk
+
+[source, xml]
+.Eksempel kvantum
+----
+<cbc:InvoicedQuantity unitCode="KWH">1178.00</cbc:InvoicedQuantity>
+----
+
+Kvantum kan både være posititivt (forbruk) og negativt (“plusskunder” med innmating til nettet).

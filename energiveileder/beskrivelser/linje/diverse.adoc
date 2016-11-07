@@ -1,0 +1,9 @@
+
+
+== Konteringsinformasjon
+
+Konteringsinformasjon, kundens kontostreng i regnskapssystemet, er valgfritt og legges i elementet AccountingCost. Innhold må være strukturert i henhold til mottakers krav. Angis kun dersom innholdet knyttet til linjen avviker fra innhold på dokumentnivå (se <<_konteringsinformasjon>>).
+
+== Målernummer linje
+
+Angis i Notat elementet på linjenivå ved samlefakturering. Se også <<målernr>>

@@ -1,0 +1,27 @@
+
+= Begrepsdefinisjoner
+
+== Generelt
+I dette dokumentet benyttes følgende begreper i relasjon til faktura/kreditnota og fakturalinje/kreditnotalinje:
+
+Dokumentnivå::
+Felles informasjon på hodenivå som gjelder hele fakturaen eller kreditnotaen.
+
+Linjenivå::
+Gjelder en enkelt linje, varelinje, som inngår i en faktura eller kreditnota.
+
+== Fakturatyper
+I energibransjen opereres det med følgene fakturatyper:
+
+Avregningsfaktura::
+Avregningsfaktura er en faktura for virkelig forbruk i en eller flere perioder. Kan inneholde nettleie, strøm og eventuelt andre produkter og tjenester.
+
+Forskudds (A-konto) faktura::
+Forskuddsfaktura er en faktura som er basert på forventet forbruk i en periode. Fakturaen kan også inneholde avregning for tidligere perioder.
+I EHF er det ingen forskjell på håndtering av forskuddsfakturaer og avregningsfakturaer.
+
+Samlefaktura::
+Samlefaktura er en faktura som inneholder flere målepunkter.
+
+Samfakturering::
+Samfakturering er når det sendes en felles faktura for nettleie og strøm, samt evt. andre produkter, fra en av leverandørene (nettselskap eller kraftleverandør). Det er en forutsetning at det kun er en av leverandørene som er juridisk eier av kravet overfor sluttkunden. Dette gjelder både når kraftleverandøren «viderefakturerer» og «gjennomfakturerer» nettleien.

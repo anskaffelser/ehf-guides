@@ -1,0 +1,35 @@
+
+=== EHF oppsett ved gjennomfakturering av næringskunder
+
+EHF oppsett ved gjennomfakturering av næringskunder skal følge DIFI’s veileder for kraftbransjen, med følgende tilpassinger for gjennomfakturering:
+
+En komplett <<_gjennomfakturering_til_bedriftskunder,eksempelfil>> finnes som vedlegg til denne veiledningen:
+
+[source,xml]
+.Fakturamottaker
+<cac:AccountingCustomerParty>
+     <cac:Party>
+        <cbc:EndpointID schemeID="NO:ORGNR">999555111</cbc:EndpointID><!--1--><!--2-->
+        <cac:PartyIdentification>
+           <cbc:ID schemeID="ZZZ">kunde123456</cbc:ID> <!--1--> <!--3-->
+        </cac:PartyIdentification>
+        <cac:PartyName>
+           <cbc:Name>Firmakunde AS</cbc:Name> <!--1--> <!--4-->
+        </cac:PartyName>
+        ...
+        <cac:PartyLegalEntity>
+           <cbc:RegistrationName>Firmakunde AS</cbc:RegistrationName>
+           <cbc:CompanyID schemeID="NO:ORGNR">987654321</cbc:CompanyID> <!--1--> <!--5-->
+        ...
+        </cac:PartyLegalEntity>
+        ...
+     </cac:Party>
+  </cac:AccountingCustomerParty>
+  ---
+<1> Påkrevet
+<2> Organisasjonsnummer til kraftselskap
+<3> ID til sluttbruker, for eksempel kundenummer
+<4> Sluttbrukers navn
+<5> Sluttbrukers organisasjonsnummer
+
+Målepunktid skal angis ved fakturering av bedriftskunder, og angis som beskrevet i kapittel <<mpkt,Målepunkt>>

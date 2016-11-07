@@ -1,0 +1,19 @@
+
+== Standardløsning
+
+Alle nettselskap som tilbyr gjennomfakturering til forbrukere via kraftleverandør må kunne tilby EHF faktura med nettselskapets «originalfaktura» til sluttbruker som pdf-vedlegg. Denne må kunne sendes gjennom EHF (PEPPOL) transportinfrastruktur til kraftleverandørens aksesspunkt som er
+registrert i ELMA.
+
+Med originalfaktura menes i denne sammenheng nettselskapets originale faktura til sluttbruker, uten betalingsinformasjon til forbruker. Merk at NVE kun stiller krav om å fjerne betalingsinformasjon i originalfaktura til privatkunder (forbrukere) og ikke bedriftskunder. Overfor næringskunder er det opp til aktørene å bestemme om betalingsinformasjon skal fjernes (sladdes) eller ikke.
+
+Med betalingsinformasjon menes forfallsdato, kontonummer og KID.
+
+Det er kraftleverandøren som er betaler av EHF-fakturaen, mens det er sluttbruker som er kunde.
+
+Å sende «originalfakturaen fra nettselskapet» som pdf-vedlegg er en enkel løsning som benyttes av mange i dag, samtidig som det er enkelt å skrive ut og sende som papir til de sluttbrukere som krever
+dette.
+
+EHF (PEPPOL) transportinfrastruktur er valgt som standard fordi man automatisk får validering av
+meldinger i EHF systemet.
+
+Andre formater og overføringsløsninger kan avtales bilateralt mellom nettselskap og kraftleverandør.

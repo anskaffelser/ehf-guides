@@ -1,0 +1,12 @@
+
+[[målernr]]
+== Målernummer
+
+Det finnes ikke noe eget element for målernummer i EHF formatet. Ved behov kan målernummeret legges i notat elementet. Det samme gjelder evt. tekst for hvor måleren er plassert (sikringsskap, vaskerom, etc.).
+For samlefaktura anbefales det å benytte notat-elementet på fakturalinje til målernummer.
+
+[source,xml]
+.Eksempel på målernummer
+----
+<cbc:Note>Målernummer:008003762, Plassering: Sikringsskap i gang</cbc:Note>
+----

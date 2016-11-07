@@ -1,0 +1,10 @@
+= Anbefalinger og presiseringer, generelt
+
+Nedenfor følger anbefalinger og presiseringer som er uavhengig av EHF versjon.
+
+== Purring
+
+Dersom purring medfører gebyr, kan de ikke sendes elektronisk i henhold til inkassoforskriften.
+
+== Avrunding
+Avrundingsregler for beløp på dokument og linjenivå er beskrevet i kapittel 6.4 i Implementeringsveileder EHF fakturaprosess versjon.
