@@ -16,6 +16,7 @@ v0.9: Draft for review
 
 include::attributes.adoc[]
 include::{sourcedir}\Kap\Introduction.adoc[]
+include::{sourcedir}\Kap\Kredittkort.adoc[]
 include::{sourcedir}\Kap\Leasing.adoc[]
 include::{sourcedir}\Kap\Loans.adoc[]
 include::{sourcedir}\Kap\Factoring.adoc[]

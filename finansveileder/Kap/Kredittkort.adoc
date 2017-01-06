@@ -1,0 +1,24 @@
+
+= Kredittkort
+
+
+Finanstilsynet har laget nye retningslinjer for fakturering av kredittkort der kortselskapene som hovedregel skal fakturere kunden for totalt utestående kreditt, men med mulighet for kunden til å avtale et lavere beløp. Retningslinjene er spesifisert i Rundskriv 10/2016 fra Finanstilsynet, og finnes her: http://www.finanstilsynet.no/Global/Venstremeny/Rundskriv_vedlegg/2016/2_kvartal/Rundskriv10_2016_fakturering_av_kredittkort.pdf
+
+I de nye retningslinjene går det klart frem at:
+
+. Kortselskapet ikke kan øke kredittrammen uten etter søknad fra kunden, og at det alltid bør avslå en søknad om kredittkort om kredittvurderingen er negativ.
+. Opplysningen i kontoutskriften skal stå på fakturaen eller i et vedlegg til fakturaen. Opplysningen skal gis hver måned, og opplysningene skal være godt synlige.
+. På alle fakturasystem skal beløpsfeltet på fakturaen vise samlet utestående kreditt. Kunden skal gis informasjon på fakturaen om at beløpet kan endres til et lavere beløp og hvilket beløp som minimum må betales.
+. Alle fakturaer der kunden har utestående kreditt, skal inneholde en tabell som viser kostandene ved ulike betalingsordninger.
+
+
+[source,xml]
+.Eksempel på utfylling av EHF faktura for kredittkort
+----
+include::../Source/Kredittkort.xml[tags=betalingsinfo]
+...
+include::../Source/Kredittkort.xml[tags=totaler]
+...
+----
+<1> Angivelse av at betalbart beløp og minste beløp til betaling gjøres i elementet PaymentTerms
+<2> Betalbart beløp for fakturaen settes til samlet utestående kreditt
