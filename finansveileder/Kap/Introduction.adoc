@@ -16,6 +16,7 @@ Følgende typer av fakturaer har prosjektet funnet i bruk i finansnæringen, og 
 
 De ulike fakturatypene gjennomgås i egne kapitler, med beskrivelser og eksempler på utfylling i EHF.
 
+. <<Kredittkort,Fakturering av kredittkort>>
 . <<Leasing,Leasing>>
 * Vanlig leasing
 * Avslutningsfaktura

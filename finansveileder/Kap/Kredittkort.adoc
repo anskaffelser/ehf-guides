@@ -1,5 +1,5 @@
 
-= Kredittkort
+= Kredittkort [[Kredittkort]]
 
 
 Finanstilsynet har laget nye retningslinjer for fakturering av kredittkort der kortselskapene som hovedregel skal fakturere kunden for totalt utestående kreditt, men med mulighet for kunden til å avtale et lavere beløp. Retningslinjene er spesifisert i Rundskriv 10/2016 fra Finanstilsynet, og finnes her: http://www.finanstilsynet.no/Global/Venstremeny/Rundskriv_vedlegg/2016/2_kvartal/Rundskriv10_2016_fakturering_av_kredittkort.pdf
