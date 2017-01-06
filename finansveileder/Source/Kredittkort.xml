@@ -131,7 +131,7 @@ Some comments has been added and is used for extracting information to the guide
 	</cac:PaymentMeans>
 	<!-- tag::betalingsinfo[]-->
 	<cac:PaymentTerms>
-		<cbc:Note>Beløp til betaling kan endres</cbc:Note> <!--1-->
+		<cbc:Note>Beløp til betaling kan endres til lavere beløp</cbc:Note> <!--1-->
 	</cac:PaymentTerms>
 	<cac:PaymentTerms>
 		<cbc:Note>Minste beløp til betaling er NOK 300,-</cbc:Note>
